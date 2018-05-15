@@ -1,0 +1,19 @@
+.navbar .navbar-nav .nav-link {
+	border-radius: 3px !important;
+}
+
+.navbar .nav-item .nav-link:hover {
+	color: $color-white !important;
+	background-color: $color-primary-light !important;
+	transition: .2s;
+}
+
+.navTrans {
+	background-color: transparent !important;
+	transition: 0.4s;
+}
+
+.navBlack {
+	background-color: $color-primary-dark !important;
+	transition: 0.4s;
+}

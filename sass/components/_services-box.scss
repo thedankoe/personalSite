@@ -1,0 +1,48 @@
+.services-box {
+    text-align: center;
+    color: $color-grey-light-1;
+
+    ul {
+        list-style: none;
+        width: 70%;
+        margin: 0 auto;
+        border-radius: 3px;
+        transition: all .4s;
+
+        li {
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 1rem;
+        }
+
+        a {
+            opacity: 0;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: .6rem;
+            font-weight: 700;
+            color: $color-grey-light-1;
+            padding:1.5rem;
+            border-radius: 2px;
+            transition: all .4s;
+
+            &:hover {
+                background-color: $color-primary-dark;
+            }
+        }
+        &:hover {
+            background-color: rgba($color-grey-light-1, .1);
+        }
+
+        &:hover a {
+            opacity: 1;
+        }
+    }
+
+    &__button {
+        margin-top: -2rem;
+        z-index: 1000;
+    }
+
+
+}
