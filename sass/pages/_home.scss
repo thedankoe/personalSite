@@ -103,6 +103,7 @@
 
 	.blog {
 		&__bs {
+
 			@include respond(bs-md) {
 				margin: 3rem 0;
 			}

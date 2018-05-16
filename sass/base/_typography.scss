@@ -40,6 +40,10 @@ body {
 		text-shadow: 0 2rem 4rem rgba($color-black, .3);
 
 		animation: moveInLeft 1.2s ease-out;
+
+		@include respond(smallest) {
+			font-size: 6rem;
+		}
 	}
 
 	&--sub {
@@ -53,6 +57,10 @@ body {
 
 		@include respond(phone) {
             letter-spacing: 1.3rem;
+        }
+		
+		@include respond(smallest) {
+            letter-spacing: 1.1rem;
         }
 	}
 

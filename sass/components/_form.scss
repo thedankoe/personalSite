@@ -85,13 +85,13 @@
         display: inline-block;
         position: absolute;
         left: 0;
-        top: 0rem;
+        top: 0;
 
         &::after {
             content: "";
             display: block;
-            height: 1.3rem;
-            width: 1.3rem;
+            height: 2rem;
+            width: 2rem;
             border-radius: 50%;
             position: absolute;
             top: 50%;

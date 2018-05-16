@@ -97,6 +97,9 @@ body {
     letter-spacing: 2.5rem;
     text-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
     animation: moveInLeft 1.2s ease-out; }
+    @media (max-width: 28.125em) {
+      .heading-primary--main {
+        font-size: 6rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 1.5rem;
@@ -107,6 +110,9 @@ body {
     @media (max-width: 37.5em) {
       .heading-primary--sub {
         letter-spacing: 1.3rem; } }
+    @media (max-width: 28.125em) {
+      .heading-primary--sub {
+        letter-spacing: 1.1rem; } }
   .heading-primary--button {
     padding: .75rem 1.5rem;
     border-radius: 50%;
@@ -208,18 +214,12 @@ body {
       background-image: url(../images/creating-contact-form-with-nodemailer.jpg); }
     .blog-box__image--3 {
       background-image: url(../images/web-design-trends.jpg); }
-  .blog-box__icon {
-    font-size: 6rem;
-    margin-bottom: .5rem;
-    display: inline-block;
-    background-image: linear-gradient(to right, rgba(65, 67, 69, 0.8), rgba(35, 37, 38, 0.8));
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent; }
   .blog-box__text {
     padding-top: 1.3rem; }
   .blog-box__read {
     opacity: 0;
+    background-color: #414345;
+    border-radius: 2px;
     color: #f7f7f7;
     text-transform: uppercase;
     letter-spacing: .6rem;
@@ -235,6 +235,10 @@ body {
         padding: 1rem 0;
         border-radius: 2px;
         background-color: rgba(65, 67, 69, 0.8); } }
+    @media (max-width: 28.125em) {
+      .blog-box__read {
+        font-size: 2rem;
+        margin-top: 2rem; } }
   .blog-box a {
     text-decoration: none;
     color: #f7f7f7; }
@@ -242,8 +246,7 @@ body {
       border-bottom: 1px solid #f7f7f7; }
   .blog-box:hover {
     transition: .4s;
-    transform: translateY(-1.5rem) scale(1.03);
-    background-image: linear-gradient(to right bottom, #414345, #232526); }
+    transform: translateY(-1.5rem) scale(1.03); }
     @media (max-width: 48em) {
       .blog-box:hover {
         background-image: none; } }
@@ -323,12 +326,12 @@ body {
   display: inline-block;
   position: absolute;
   left: 0;
-  top: 0rem; }
+  top: 0; }
   .form__check-button::after {
     content: "";
     display: block;
-    height: 1.3rem;
-    width: 1.3rem;
+    height: 2rem;
+    width: 2rem;
     border-radius: 50%;
     position: absolute;
     top: 50%;
@@ -452,11 +455,17 @@ body {
 .navbar-toggler-icon {
   font-size: 2rem; }
 
-.navbar .navbar-nav .nav-link {
+.navbar .nav-item .nav-link {
   border-radius: 3px !important; }
   @media (max-width: 62em) {
-    .navbar .navbar-nav .nav-link {
+    .navbar .nav-item .nav-link {
       text-align: center; } }
+  @media (max-width: 28.125em) {
+    .navbar .nav-item .nav-link {
+      font-size: 1.3rem; } }
+
+.nav-color {
+  background-color: #232526 !important; }
 
 .navbar .nav-item .nav-link:hover {
   color: #fff !important;
@@ -473,6 +482,41 @@ body {
 .navBlack {
   background-color: #232526 !important;
   transition: 0.4s; }
+
+.section-blog-page {
+  padding: 10rem 0;
+  background-color: #f7f7f7; }
+  .section-blog-page__row {
+    margin: 5rem 0;
+    background-image: linear-gradient(to right, #414345, #232526);
+    border-radius: 4px;
+    box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
+    transition: all .3s;
+    overflow: hidden;
+    animation: moveInBottom 1.3s ease-out; }
+    .section-blog-page__row:hover {
+      transform: translateY(-1rem) scale(1.02);
+      box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15); }
+  .section-blog-page__image {
+    height: 23rem;
+    background-size: cover; }
+    .section-blog-page__image--1 {
+      background-image: url(../images/web-design-trends.jpg); }
+    .section-blog-page__image--2 {
+      background-image: url(../images/creating-contact-form-with-nodemailer.jpg); }
+    .section-blog-page__image--3 {
+      background-image: url(../images/web-design-trends.jpg); }
+  .section-blog-page__text-box {
+    padding: 3rem 1rem;
+    text-align: center; }
+  .section-blog-page__heading {
+    font-size: 2.7rem;
+    text-transform: uppercase;
+    color: #f7f7f7;
+    letter-spacing: .5rem; }
+  .section-blog-page__text {
+    font-size: 1.7rem;
+    color: #f7f7f7; }
 
 .section-header {
   height: 100vh;

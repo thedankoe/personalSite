@@ -1,0 +1,54 @@
+.section-blog-page {
+    padding: 10rem 0;
+    background-color: $color-grey-light-1;
+
+    &__row {
+        margin: 5rem 0;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        border-radius: 4px;
+        box-shadow: 0 2rem 4rem rgba($color-black, .2);
+        transition: all .3s;
+        overflow: hidden;
+
+        animation: moveInBottom 1.3s ease-out;
+
+        &:hover {
+            transform: translateY(-1rem) scale(1.02);
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
+        }
+    }
+
+    &__image {
+        height: 23rem;
+        background-size: cover;
+
+        &--1 {
+            background-image: url(../images/web-design-trends.jpg);
+        }
+
+        &--2 {
+            background-image: url(../images/creating-contact-form-with-nodemailer.jpg);
+        }
+        
+        &--3 {
+            background-image: url(../images/web-design-trends.jpg);
+        }
+    }
+
+    &__text-box {
+        padding: 3rem 1rem;
+        text-align: center;
+    }
+
+    &__heading {
+        font-size: 2.7rem;
+        text-transform: uppercase;
+        color: $color-grey-light-1;
+        letter-spacing: .5rem;
+    }
+
+    &__text {
+        font-size: 1.7rem;
+        color: $color-grey-light-1;
+    }
+}

@@ -2,12 +2,20 @@
 	font-size: 2rem;
 }
 
-.navbar .navbar-nav .nav-link {
+.navbar .nav-item .nav-link {
 	border-radius: 3px !important;
 
 	@include respond(bs-nav) {
 		text-align: center;
 	}
+
+	@include respond(smallest) {
+		font-size: 1.3rem;
+	}
+}
+
+.nav-color {
+	background-color: $color-primary-dark !important;
 }
 
 .navbar .nav-item .nav-link:hover {

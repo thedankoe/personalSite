@@ -31,24 +31,14 @@
         }
     }
 
-    &__icon {
-        font-size: 6rem;
-        margin-bottom: .5rem;
-        display: inline-block;
-        background-image:linear-gradient(to right,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-    }
-
     &__text {
         padding-top: 1.3rem;
     }
 
     &__read {
         opacity: 0;
+        background-color: $color-primary-light;
+        border-radius: 2px;
         color: $color-grey-light-1;
         text-transform: uppercase;
         letter-spacing: .6rem;
@@ -65,6 +55,11 @@
             border-radius: 2px;
             background-color: rgba($color-primary-light, 0.8);
         }
+
+        @include respond(smallest) {
+            font-size: 2rem;
+            margin-top: 2rem;
+        }
     }
 
     a {
@@ -80,7 +75,6 @@
     &:hover {
         transition: .4s;
         transform: translateY(-1.5rem) scale(1.03);
-        background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 
         @include respond(bs-md) {
             background-image: none;
