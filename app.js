@@ -72,10 +72,10 @@ app.post('/', (req, res) => {
   });
 });
 
-// app.listen(process.env.PORT, process.env.IP, function(){
-//    console.log("Server has started");
-// });
-
-app.listen(port, () => {
-  console.log('Server started on http://localhost:' + port);
+app.listen(process.env.PORT, process.env.IP, function(){
+   console.log("Server has started");
 });
+
+// app.listen(port, () => {
+//   console.log('Server started on http://localhost:' + port);
+// });
