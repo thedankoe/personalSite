@@ -9,6 +9,10 @@
 
     &__height {
         height: 40rem;
+
+        @include respond(smallest) {
+            height: 45rem;
+        }
     }
 
     &__image {
@@ -59,6 +63,7 @@
         @include respond(smallest) {
             font-size: 2rem;
             margin-top: 2rem;
+            letter-spacing: 0;
         }
     }
 
