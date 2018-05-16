@@ -1,6 +1,6 @@
 .section-header {
 	height: 100vh;
-	padding: 20rem 5rem;
+	padding: 5rem;
 	background-image: linear-gradient(105deg,
                                     rgba($color-primary-light, .9) 0%,
                                     rgba($color-primary-dark, .9) 50%,
@@ -8,6 +8,47 @@
 								url(../images/hero-image.jpg);
 	background-size: cover;
 	background-position: top;
+	position: relative;
+
+	@include respond(tab-port) {
+		height: 70vh;
+		background-image: linear-gradient(105deg,
+                                    rgba($color-primary-light, .9) 0%,
+                                    rgba($color-primary-dark, .9) 70%,
+                                    transparent 70%),
+								url(../images/hero-image.jpg);
+	}
+	
+	@include respond(phone) {
+		height: 70vh;
+		background-image: linear-gradient(to right bottom,
+                                    rgba($color-primary-light, .9),
+                                    rgba($color-primary-dark, .9)),
+									url(../images/hero-image.jpg);
+	}
+
+	&__name {
+		position: absolute;
+		top: 35%;
+		
+		@include respond(tab-port) {
+			left: 15%;
+		}
+
+		@include respond(phone) {
+			width: 100%;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+	}
+
+	&__button {
+		@include respond(phone) {
+			width: 100%;
+			text-align: center;
+		}
+	}
 }
 
 .section-about {
@@ -15,8 +56,18 @@
 	padding-bottom: 20rem;
 	margin-bottom: -10rem;
 
+	@include respond(tab-port) {
+		padding-bottom: 13rem;
+	}
+
 	.about {
 		padding: 10rem 0;
+
+		&__bs {
+			@include respond(bs-md) {
+				margin: 3rem 0;
+			}
+		}
 	}
 }
 
@@ -27,15 +78,36 @@
 	background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 	transform: skewY(-7deg);
 
+	@include respond(bs-md) {
+		height: 105rem;
+	}
+
+	.services {
+		&__bs {
+			@include respond(bs-md) {
+				margin: 3rem 0;
+			}
+		}
+	}
+	
+
 	& > * {
 		transform: skewY(7deg);
 	}
 }
 
 .section-blog {
-	padding-top: 25rem;
-	padding-bottom: 15rem;
+	padding-top: 30rem;
+	padding-bottom: 10rem;
 	background-color: $color-grey-light-1;
+
+	.blog {
+		&__bs {
+			@include respond(bs-md) {
+				margin: 3rem 0;
+			}
+		}
+	}
 }
 
 .section-contact {
@@ -51,12 +123,22 @@
 		background-size: cover;
 		border-radius: 3px;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-	
-		height: 50rem;
+
+		@include respond(bs-md) {
+			background-image: linear-gradient(105deg,
+										rgba($color-primary-light, .9) 0%,
+										rgba($color-primary-dark, .9) 75%,
+										transparent 75%),
+									url(../images/contact-web-design.jpg);
+		}
 	
 		&__form {
 			width: 50%;
 			padding: 6rem;
+
+			@include respond(bs-md) {
+				width: 80%;
+			}
 		}
 	}
 }

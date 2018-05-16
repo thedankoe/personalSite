@@ -26,6 +26,12 @@
             border-radius: 2px;
             transition: all .4s;
 
+            @include respond(bs-md) {
+                display: block;
+                opacity: 1;
+                background-color: $color-primary-dark;
+            }
+
             &:hover {
                 background-color: $color-primary-dark;
             }
@@ -42,6 +48,10 @@
     &__button {
         margin-top: -2rem;
         z-index: 1000;
+
+        @include respond(bs-md) {
+            margin-top: 0;
+        }
     }
 
 

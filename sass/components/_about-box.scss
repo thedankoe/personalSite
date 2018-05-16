@@ -9,6 +9,10 @@
 
     &__height {
         height: 25rem;
+
+        @include respond(bs-md) {
+            height: 20rem;
+        }
     }
 
     &__icon {
@@ -21,6 +25,10 @@
         -webkit-background-clip: text;
         background-clip: text;
         color: transparent;
+
+        @include respond(bs-md) {
+            font-size: 8rem;
+        }
     }
 
     &__text {

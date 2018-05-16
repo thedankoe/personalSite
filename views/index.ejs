@@ -13,15 +13,15 @@
 <!-- /HERO -->
 
 <header id="header" class="section-header">
-	<div class="hero">
-		<div class="hero__name">
+		<div class="section-header__name">
 			<h1 class="heading-primary">
 				<span class="heading-primary--main">Dan Koe</span>
 				<span class="heading-primary--sub">Full Stack Developer</span>
 			</h1>
+		<div class="section-header__button">
 			<a href="#about" class="heading-primary--button btn btn-outline-light"><i class="fas fa-chevron-down"></i></a>
 		</div>
-	</div>
+		</div>
 </header>
 
 <!-- ABOUT -->
@@ -31,7 +31,7 @@
 		<h2 class="heading-secondary">I create websites</h2>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 about__bs">
 					<div class="about-box">
 						<div class="about-box__height">
 							<i class="about-box__icon icon-basic-compass"></i>
@@ -42,7 +42,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 about__bs">
 					<div class="about-box">
 						<div class="about-box__height">
 							<i class="about-box__icon icon-basic-smartphone"></i>
@@ -53,7 +53,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 about__bs">
 					<div class="about-box">
 						<div class="about-box__height">
 							<i class="about-box__icon icon-basic-accelerator"></i>
@@ -76,7 +76,7 @@
 	<h2 id="services" class="heading-secondary-light">Services</h2>
 	<div class="container">
 		<div class="row">
-			<div class="col-md-6">
+			<div class="col-md-6 services__bs">
 				<div class="services-box">
 					<div class="services-box__height">
 						<h3 class="heading-tertiary-light">Website Creation</h3>
@@ -93,7 +93,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="col-md-6">
+			<div class="col-md-6 services__bs">
 				<div class="services-box">
 					<div class="services-box__height">
 						<h3 class="heading-tertiary-light">Marketing Package</h3>
@@ -122,7 +122,7 @@
 		<h2 class="heading-secondary">Blog</h2>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-4">
+				<div class="col-md-4 blog__bs">
 					<div class="blog-box">
 						<div class="blog-box__height">
 							<div class="blog-box__image blog-box__image--1">&nbsp;</div>
@@ -134,7 +134,7 @@
 						</div>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-md-4 blog__bs">
 					<div class="blog-box">
 						<div class="blog-box__height">
 							<div class="blog-box__image blog-box__image--2">&nbsp;</div>
@@ -193,8 +193,7 @@
 									Website Creation
 								</label>
 							</div>
-						</div>
-						<div class="form__group">
+
 							<div class="form__check-group">
 								<input type="checkbox" class="form__check-input" id="marketing" name="marketing">
 								<label for="marketing" class="form__check-label">

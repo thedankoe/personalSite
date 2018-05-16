@@ -42,6 +42,11 @@
 	}
 
 	&__social {
+
+		@include respond(bs-md) {
+			margin-top: 3.5rem;
+		}
+
 		&-heading {
 			margin-bottom: 2rem;
 		}
@@ -62,6 +67,10 @@
 		padding-top: 10rem;
 		text-align: center;
 		margin: 0 auto;
+
+		@include respond(bs-md) {
+			padding-top: 5rem;
+		}
 
 		&-text {
 			font-size: 1.7rem;

@@ -1,11 +1,23 @@
+.navbar-toggler-icon {
+	font-size: 2rem;
+}
+
 .navbar .navbar-nav .nav-link {
 	border-radius: 3px !important;
+
+	@include respond(bs-nav) {
+		text-align: center;
+	}
 }
 
 .navbar .nav-item .nav-link:hover {
 	color: $color-white !important;
 	background-color: $color-primary-light !important;
 	transition: .2s;
+
+	@include respond(bs-nav) {
+		background-color: none !important;
+	}
 }
 
 .navTrans {
