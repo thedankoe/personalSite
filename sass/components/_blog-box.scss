@@ -8,10 +8,19 @@
     transition: all .3s;
 
     &__height {
-        height: 40rem;
+        height: 36rem;
+        transition: all .3s;
 
-        @include respond(smallest) {
+        @include respond(tab-land) {
             height: 45rem;
+        }
+
+        @include respond(bs-nav) {
+            height: 50rem;
+        }
+
+        @include respond(bs-md) {
+            height: 40rem;
         }
     }
 
@@ -23,15 +32,15 @@
         clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
 
         &--1 {
-            background-image: url(../images/web-design-trends.jpg);
+            background-image: url(../images/blog-section-web-design-trends.jpg);
         }
         
         &--2 {
-            background-image: url(../images/creating-contact-form-with-nodemailer.jpg);
+            background-image: url(../images/blog-section-creating-contact-form-with-nodemailer.jpg);
         }
         
         &--3 {
-            background-image: url(../images/web-design-trends.jpg);
+            background-image: url(../images/blog-section-learn-html-basics.jpg);
         }
     }
 
@@ -41,38 +50,48 @@
 
     &__read {
         opacity: 0;
-        background-color: $color-primary-light;
+        visibility: hidden;
+        display: block;
+        padding: .5rem .4rem .5rem .7rem;
+        background-color: $color-primary-dark;
+        backface-visibility: hidden;
         border-radius: 2px;
         color: $color-grey-light-1;
+        text-decoration: none;
         text-transform: uppercase;
-        letter-spacing: .6rem;
-        font-size: 2.5rem;
+        letter-spacing: .3rem;
+        font-size: 2.2rem;
         transition: .4s;
         margin: 0 auto;
+        transform: translateY(5rem);
+
+        @include respond(tab-land) {
+            opacity: 1;
+            visibility: visible;
+            width: 80%;
+            font-size: 2rem;
+            transform: translateY(1rem);
+        }
+
+        @include respond(bs-nav) {
+            width: 85%;
+            font-size: 1.7rem;
+        }
 
         @include respond(bs-md) {
             width: 60%;
-            opacity: 1;
-            display: block;
-            margin-top: 3.5rem;
-            padding: 1rem 0;
-            border-radius: 2px;
-            background-color: rgba($color-primary-light, 0.8);
+            font-size: 2.2rem;
         }
 
         @include respond(smallest) {
-            font-size: 2rem;
-            margin-top: 2rem;
+            margin-top: 1rem;
             letter-spacing: 0;
         }
-    }
-
-    a {
-        text-decoration: none;
-        color: $color-grey-light-1;
 
         &:hover {
-            border-bottom: 1px solid $color-grey-light-1;
+            text-decoration: none;
+            color: $color-grey-light-1;
+            background-color: $color-grey-light-2;
         }
     }
 
@@ -80,18 +99,31 @@
     &:hover {
         transition: .4s;
         transform: translateY(-1.5rem) scale(1.03);
-
-        @include respond(bs-md) {
-            background-image: none;
-        }
     }
 
     &:hover &__read {
         opacity: 1;
-        transform: translateY(-10rem);
+        visibility: visible;
+        transform: translateY(-.8rem);
+
+        @include respond(tab-land) {
+            transform: translateY(1rem);
+        }
+    }
+
+    &:hover &__height {
+        height: 40rem;
+
+        @include respond(tab-land) {
+            height: 45rem;
+        }
+
+        @include respond(bs-nav) {
+            height: 50rem;
+        }
 
         @include respond(bs-md) {
-            transform: translateY(0);
+            height: 40rem;
         }
     }
 }

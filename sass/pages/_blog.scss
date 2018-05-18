@@ -4,7 +4,7 @@
 
     &__row {
         margin: 5rem 0;
-        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        background-image: linear-gradient(to right bottom, rgba($color-primary-light, .7), $color-primary-dark);
         border-radius: 4px;
         box-shadow: 0 2rem 4rem rgba($color-black, .2);
         transition: all .3s;
@@ -23,15 +23,15 @@
         background-size: cover;
 
         &--1 {
-            background-image: url(../images/web-design-trends.jpg);
+            background-image: url(../images/blog-section-web-design-trends.jpg);
         }
 
         &--2 {
-            background-image: url(../images/creating-contact-form-with-nodemailer.jpg);
+            background-image: url(../images/blog-section-creating-contact-form-with-nodemailer.jpg);
         }
         
         &--3 {
-            background-image: url(../images/web-design-trends.jpg);
+            background-image: url(../images/blog-section-learn-html-basics.jpg);
         }
     }
 
@@ -50,5 +50,11 @@
     &__text {
         font-size: 1.7rem;
         color: $color-grey-light-1;
+    }
+
+    &__link {
+        font-size: 1.7rem;
+        margin-top: 1rem;
+        text-transform: uppercase;
     }
 }

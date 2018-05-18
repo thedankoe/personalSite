@@ -95,25 +95,30 @@ body {
     font-size: 7rem;
     font-weight: 400;
     letter-spacing: 2.5rem;
+    margin-right: -2.5rem;
     text-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
     animation: moveInLeft 1.2s ease-out; }
     @media (max-width: 28.125em) {
       .heading-primary--main {
         font-size: 5rem;
-        letter-spacing: 2rem; } }
+        letter-spacing: 2rem;
+        margin-right: -2rem; } }
   .heading-primary--sub {
     display: block;
     font-size: 1.5rem;
     font-weight: 400;
     letter-spacing: 1.45rem;
+    margin-right: -1.45rem;
     text-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.3);
     animation: moveInLeft 1.2s ease-out; }
     @media (max-width: 37.5em) {
       .heading-primary--sub {
-        letter-spacing: 1.3rem; } }
+        letter-spacing: 1.3rem;
+        margin-right: -1.3rem; } }
     @media (max-width: 28.125em) {
       .heading-primary--sub {
-        letter-spacing: .7rem; } }
+        letter-spacing: .7rem;
+        margin-right: -.7rem; } }
   .heading-primary--button {
     padding: .75rem 1.5rem;
     border-radius: 50%;
@@ -133,6 +138,7 @@ body {
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1.25rem;
+  margin-right: -1.25rem;
   color: #232526;
   margin-bottom: 4rem; }
   .heading-secondary--button {
@@ -148,6 +154,7 @@ body {
   font-size: 4rem;
   text-transform: uppercase;
   letter-spacing: 1.25rem;
+  margin-right: -1.25rem;
   color: #f7f7f7;
   margin-bottom: 4rem; }
 
@@ -162,7 +169,8 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   color: #f7f7f7;
-  letter-spacing: .5rem; }
+  letter-spacing: .5rem;
+  margin-right: -.5rem; }
 
 .about-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -190,8 +198,52 @@ body {
         font-size: 8rem; } }
   .about-box__text {
     padding-top: 1.3rem; }
-  .about-box:hover {
-    transform: translateY(-1.5rem) scale(1.03); }
+  .about-box__work {
+    margin: 5rem auto;
+    background-image: linear-gradient(105deg, rgba(65, 67, 69, 0.9) 50%, rgba(35, 37, 38, 0.9) 50%, rgba(35, 37, 38, 0.9) 100%), url(../images/about-web-design.jpg);
+    background-size: cover;
+    background-position: center; }
+    .about-box__work-text {
+      color: #f7f7f7;
+      font-size: 2rem;
+      font-weight: 300;
+      text-transform: uppercase;
+      letter-spacing: .2rem;
+      margin-right: -.2rem; }
+      .about-box__work-text--2 {
+        padding-bottom: 2rem;
+        border-bottom: 1px solid #f7f7f7; }
+        @media (max-width: 36em) {
+          .about-box__work-text--2 {
+            margin-top: 3rem; } }
+    .about-box__work-button {
+      display: block;
+      margin: 3rem auto;
+      text-transform: uppercase;
+      color: #f7f7f7;
+      border: 1px solid #f7f7f7;
+      border-radius: 2px;
+      letter-spacing: .2rem;
+      padding: .5rem .8rem .5rem 1rem;
+      transition: all .2s; }
+      .about-box__work-button:hover {
+        color: #232526;
+        background-color: #f7f7f7;
+        text-decoration: none; }
+  .about-box__heading {
+    text-transform: uppercase;
+    font-size: 3rem;
+    color: #f7f7f7;
+    letter-spacing: .6rem;
+    margin-right: -.6rem;
+    margin-bottom: 3rem; }
+  .about-box__social-img img {
+    width: 6rem;
+    height: 6rem; }
+  .about-box__button {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto; }
 
 .blog-box {
   background-color: rgba(255, 255, 255, 0.8);
@@ -202,10 +254,17 @@ body {
   box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.15);
   transition: all .3s; }
   .blog-box__height {
-    height: 40rem; }
-    @media (max-width: 28.125em) {
+    height: 36rem;
+    transition: all .3s; }
+    @media (max-width: 75em) {
       .blog-box__height {
         height: 45rem; } }
+    @media (max-width: 62em) {
+      .blog-box__height {
+        height: 50rem; } }
+    @media (max-width: 48em) {
+      .blog-box__height {
+        height: 40rem; } }
   .blog-box__image {
     background-size: cover;
     height: 20rem;
@@ -213,57 +272,76 @@ body {
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
     .blog-box__image--1 {
-      background-image: url(../images/web-design-trends.jpg); }
+      background-image: url(../images/blog-section-web-design-trends.jpg); }
     .blog-box__image--2 {
-      background-image: url(../images/creating-contact-form-with-nodemailer.jpg); }
+      background-image: url(../images/blog-section-creating-contact-form-with-nodemailer.jpg); }
     .blog-box__image--3 {
-      background-image: url(../images/web-design-trends.jpg); }
+      background-image: url(../images/blog-section-learn-html-basics.jpg); }
   .blog-box__text {
     padding-top: 1.3rem; }
   .blog-box__read {
     opacity: 0;
-    background-color: #414345;
+    visibility: hidden;
+    display: block;
+    padding: .5rem .4rem .5rem .7rem;
+    background-color: #232526;
+    backface-visibility: hidden;
     border-radius: 2px;
     color: #f7f7f7;
+    text-decoration: none;
     text-transform: uppercase;
-    letter-spacing: .6rem;
-    font-size: 2.5rem;
+    letter-spacing: .3rem;
+    font-size: 2.2rem;
     transition: .4s;
-    margin: 0 auto; }
+    margin: 0 auto;
+    transform: translateY(5rem); }
+    @media (max-width: 75em) {
+      .blog-box__read {
+        opacity: 1;
+        visibility: visible;
+        width: 80%;
+        font-size: 2rem;
+        transform: translateY(1rem); } }
+    @media (max-width: 62em) {
+      .blog-box__read {
+        width: 85%;
+        font-size: 1.7rem; } }
     @media (max-width: 48em) {
       .blog-box__read {
         width: 60%;
-        opacity: 1;
-        display: block;
-        margin-top: 3.5rem;
-        padding: 1rem 0;
-        border-radius: 2px;
-        background-color: rgba(65, 67, 69, 0.8); } }
+        font-size: 2.2rem; } }
     @media (max-width: 28.125em) {
       .blog-box__read {
-        font-size: 2rem;
-        margin-top: 2rem;
+        margin-top: 1rem;
         letter-spacing: 0; } }
-  .blog-box a {
-    text-decoration: none;
-    color: #f7f7f7; }
-    .blog-box a:hover {
-      border-bottom: 1px solid #f7f7f7; }
+    .blog-box__read:hover {
+      text-decoration: none;
+      color: #f7f7f7;
+      background-color: #777; }
   .blog-box:hover {
     transition: .4s;
     transform: translateY(-1.5rem) scale(1.03); }
-    @media (max-width: 48em) {
-      .blog-box:hover {
-        background-image: none; } }
   .blog-box:hover .blog-box__read {
     opacity: 1;
-    transform: translateY(-10rem); }
-    @media (max-width: 48em) {
+    visibility: visible;
+    transform: translateY(-0.8rem); }
+    @media (max-width: 75em) {
       .blog-box:hover .blog-box__read {
-        transform: translateY(0); } }
+        transform: translateY(1rem); } }
+  .blog-box:hover .blog-box__height {
+    height: 40rem; }
+    @media (max-width: 75em) {
+      .blog-box:hover .blog-box__height {
+        height: 45rem; } }
+    @media (max-width: 62em) {
+      .blog-box:hover .blog-box__height {
+        height: 50rem; } }
+    @media (max-width: 48em) {
+      .blog-box:hover .blog-box__height {
+        height: 40rem; } }
 
 .form__group:not(:last-child) {
-  margin-bottom: 2rem; }
+  margin-bottom: 1rem; }
 
 .form__input {
   font-size: 1.5rem;
@@ -349,15 +427,42 @@ body {
 .form__check-input:checked ~ .form__check-label .form__check-button::after {
   opacity: 1; }
 
+.form__message {
+  width: 90%;
+  height: 10rem;
+  margin-top: 2rem;
+  padding: 1.5rem 2rem;
+  background-color: #f7f7f7;
+  color: inherit;
+  font-size: 1.5rem;
+  font-family: 'Raleway', sans-serif;
+  border: none;
+  border-radius: 3px;
+  outline: none;
+  resize: none; }
+  .form__message::placeholder {
+    color: inherit;
+    font-size: 1.5rem;
+    font-family: 'Raleway', sans-serif; }
+
 .form__submit {
   display: inline-block; }
 
 .form__button {
   margin-top: 1.7rem;
+  padding: .5rem .6rem .5rem 1rem;
+  border-radius: 2.5px;
+  color: #f7f7f7;
+  background-color: transparent;
+  border: 1px solid #f7f7f7;
   font-size: 2rem;
   text-transform: uppercase;
   font-weight: 400;
-  letter-spacing: .4rem; }
+  letter-spacing: .4rem;
+  transition: all .2s; }
+  .form__button:hover {
+    background-color: #f7f7f7;
+    color: #232526; }
 
 .form .alert {
   display: none;
@@ -370,40 +475,82 @@ body {
 
 .services-box {
   text-align: center;
-  color: #f7f7f7; }
+  color: #f7f7f7;
+  background-color: #414345;
+  padding: 2rem; }
+  .services-box--1 {
+    background-image: linear-gradient(105deg, rgba(35, 37, 38, 0.9) 0%, rgba(35, 37, 38, 0.9) 75%, transparent 75%), url(../images/services-website-creation.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  .services-box--2 {
+    background-image: linear-gradient(105deg, rgba(35, 37, 38, 0.95) 0%, rgba(35, 37, 38, 0.95) 75%, transparent 75%), url(../images/services-marketing-package.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 3px;
+    box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
+  .services-box__height {
+    height: 27rem;
+    transition: all .3s; }
+    @media (max-width: 75em) {
+      .services-box__height {
+        height: 30rem; } }
   .services-box ul {
     list-style: none;
-    width: 70%;
+    width: 80%;
     margin: 0 auto;
     border-radius: 3px;
     transition: all .4s; }
     .services-box ul li {
       text-align: center;
-      font-size: 1.5rem;
+      font-size: 1.8rem;
       padding: 1rem; }
+      @media (max-width: 75em) {
+        .services-box ul li {
+          font-size: 1.6rem; } }
     .services-box ul a {
       opacity: 0;
+      visibility: hidden;
       text-decoration: none;
       text-transform: uppercase;
       letter-spacing: .6rem;
       font-weight: 700;
       color: #f7f7f7;
-      padding: 1.5rem;
+      border: 1px solid #f7f7f7;
+      padding: 1.5rem .9rem 1.5rem 1.5rem;
       border-radius: 2px;
       transition: all .4s; }
+      @media (max-width: 75em) {
+        .services-box ul a {
+          opacity: 1;
+          visibility: visible; } }
+      @media (max-width: 56.25em) {
+        .services-box ul a {
+          width: 75%;
+          display: block;
+          font-size: 1.4rem;
+          padding: 1rem .4rem 1rem 1rem;
+          margin: 0 auto; } }
       @media (max-width: 48em) {
         .services-box ul a {
-          display: block;
-          opacity: 1;
-          background-color: #232526; } }
+          width: 60%; } }
       .services-box ul a:hover {
-        background-color: #232526; }
-    .services-box ul:hover {
-      background-color: rgba(247, 247, 247, 0.1); }
-    .services-box ul:hover a {
-      opacity: 1; }
+        background-color: #f7f7f7;
+        color: #232526; }
+  .services-box:hover {
+    transition: .4s;
+    transform: translateY(-1.5rem) scale(1.03); }
+  .services-box:hover .services-box__height {
+    height: 32rem; }
+    @media (max-width: 75em) {
+      .services-box:hover .services-box__height {
+        height: 30rem; } }
+  .services-box:hover a {
+    opacity: 1;
+    visibility: visible; }
   .services-box__button {
-    margin-top: -2rem;
+    margin-top: 4rem;
     z-index: 1000; }
     @media (max-width: 48em) {
       .services-box__button {
@@ -461,13 +608,11 @@ body {
   font-size: 2rem; }
 
 .navbar .nav-item .nav-link {
-  border-radius: 3px !important; }
+  border-radius: 3px !important;
+  font-size: 1.6rem; }
   @media (max-width: 62em) {
     .navbar .nav-item .nav-link {
       text-align: center; } }
-  @media (max-width: 28.125em) {
-    .navbar .nav-item .nav-link {
-      font-size: 1.3rem; } }
 
 .nav-color {
   background-color: #232526 !important; }
@@ -493,7 +638,7 @@ body {
   background-color: #f7f7f7; }
   .section-blog-page__row {
     margin: 5rem 0;
-    background-image: linear-gradient(to right, #414345, #232526);
+    background-image: linear-gradient(to right bottom, rgba(65, 67, 69, 0.7), #232526);
     border-radius: 4px;
     box-shadow: 0 2rem 4rem rgba(0, 0, 0, 0.2);
     transition: all .3s;
@@ -506,11 +651,11 @@ body {
     height: 23rem;
     background-size: cover; }
     .section-blog-page__image--1 {
-      background-image: url(../images/web-design-trends.jpg); }
+      background-image: url(../images/blog-section-web-design-trends.jpg); }
     .section-blog-page__image--2 {
-      background-image: url(../images/creating-contact-form-with-nodemailer.jpg); }
+      background-image: url(../images/blog-section-creating-contact-form-with-nodemailer.jpg); }
     .section-blog-page__image--3 {
-      background-image: url(../images/web-design-trends.jpg); }
+      background-image: url(../images/blog-section-learn-html-basics.jpg); }
   .section-blog-page__text-box {
     padding: 3rem 1rem;
     text-align: center; }
@@ -522,6 +667,46 @@ body {
   .section-blog-page__text {
     font-size: 1.7rem;
     color: #f7f7f7; }
+  .section-blog-page__link {
+    font-size: 1.7rem;
+    margin-top: 1rem;
+    text-transform: uppercase; }
+
+.section-blog-show {
+  padding: 10rem 0;
+  background-color: #f7f7f7; }
+  .section-blog-show__text {
+    font-size: 2rem;
+    margin: 2rem 0; }
+    .section-blog-show__text-link {
+      font-size: 2rem;
+      font-weight: 700; }
+      .section-blog-show__text-link:not(:last-child) {
+        margin-bottom: 5rem; }
+  .section-blog-show__image {
+    width: 100%;
+    height: 40rem;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 5rem; }
+    .section-blog-show__image--1 {
+      background-image: url(../images/blog-show-web-design-trends.jpg); }
+    .section-blog-show__image--2 {
+      background-image: url(../images/blog-show-web-design-trends-color.jpg); }
+    .section-blog-show__image--3 {
+      background-image: url(../images/blog-show-web-design-trends-animation.jpg); }
+    .section-blog-show__image--4 {
+      background-image: url(../images/blog-show-web-design-trends-gradients.png); }
+    .section-blog-show__image--5 {
+      background-image: url(../images/blog-show-web-design-trends-asymmetric.png); }
+  .section-blog-show__heading {
+    margin: 3rem 0;
+    text-align: center;
+    font-size: 4rem;
+    text-transform: uppercase;
+    letter-spacing: .6rem; }
+  .section-blog-show__link {
+    text-transform: uppercase; }
 
 .section-header {
   height: 100vh;
@@ -556,6 +741,7 @@ body {
 
 .section-about {
   background-color: #f7f7f7;
+  padding-top: 10rem;
   padding-bottom: 20rem;
   margin-bottom: -10rem; }
   @media (max-width: 56.25em) {
@@ -569,13 +755,13 @@ body {
 
 .section-services {
   padding: 10rem 0;
-  height: 60rem;
+  height: 68rem;
   margin-bottom: -10rem;
   background-image: linear-gradient(to right bottom, #414345, #232526);
   transform: skewY(-7deg); }
   @media (max-width: 48em) {
     .section-services {
-      height: 105rem; } }
+      height: 110rem; } }
   @media (max-width: 48em) {
     .section-services .services__bs {
       margin: 3rem 0; } }
@@ -594,16 +780,22 @@ body {
   padding: 15rem 0;
   background-color: #f7f7f7; }
   .section-contact .contact {
-    background-image: linear-gradient(105deg, rgba(65, 67, 69, 0.9) 0%, rgba(35, 37, 38, 0.9) 50%, transparent 50%), url(../images/contact-web-design.jpg);
+    background-image: linear-gradient(105deg, rgba(65, 67, 69, 0.9) 0%, rgba(35, 37, 38, 0.9) 60%, transparent 60%), url(../images/contact-web-design.jpg);
     background-size: cover;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba(0, 0, 0, 0.2); }
     @media (max-width: 48em) {
       .section-contact .contact {
         background-image: linear-gradient(105deg, rgba(65, 67, 69, 0.9) 0%, rgba(35, 37, 38, 0.9) 75%, transparent 75%), url(../images/contact-web-design.jpg); } }
+    @media (max-width: 28.125em) {
+      .section-contact .contact {
+        background-image: linear-gradient(to right, rgba(65, 67, 69, 0.9), rgba(35, 37, 38, 0.9)), url(../images/contact-web-design.jpg); } }
     .section-contact .contact__form {
-      width: 50%;
+      width: 65%;
       padding: 6rem; }
       @media (max-width: 48em) {
         .section-contact .contact__form {
-          width: 80%; } }
+          width: 90%; } }
+      @media (max-width: 28.125em) {
+        .section-contact .contact__form {
+          width: 100%; } }

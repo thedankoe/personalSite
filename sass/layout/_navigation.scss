@@ -4,13 +4,10 @@
 
 .navbar .nav-item .nav-link {
 	border-radius: 3px !important;
+	font-size: 1.6rem;
 
 	@include respond(bs-nav) {
 		text-align: center;
-	}
-
-	@include respond(smallest) {
-		font-size: 1.3rem;
 	}
 }
 

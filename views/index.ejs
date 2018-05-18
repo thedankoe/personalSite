@@ -47,11 +47,30 @@
 							<i class="about-box__icon icon-basic-accelerator"></i>
 							<h3 class="heading-tertiary">Optimized</h3>
 							<p class="about-box__text">
-								From layout to SEO, my websites are conversion centered and will guarentee you more leads.
+								From layout to SEO, my websites are conversion centered and will guarantee you more leads.
 							</p>
 						</div>
 					</div>
 				</div>
+			</div>
+			<div class="row">
+				<div class="about-box about-box__work">
+					<div class="about-box__work--height">
+						<h3 class="about-box__heading">My work</h3>
+						<div class="row">
+							<div class="col-sm-6 about-box__details">
+								<p class="about-box__work-text">Visit my github</p>
+								<a class="about-box__social-img" href="https://github.com/thedankoe" target="_blank"><img src="/images/githublogo.png" alt="Instagram logo"></a>
+							</div>
+							<div class="col-sm-6 about-box__details">
+								<p class="about-box__work-text about-box__work-text--2">Previous work available upon request</p>
+							</div>
+						<a href="#contact" class="about-box__work-button">Request work</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="about-box__button">
 				<a href="#services" class="heading-secondary--button btn btn-outline-dark"><i class="fas fa-chevron-down"></i></a>
 			</div>
 		</div>
@@ -65,13 +84,13 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6 services__bs">
-				<div class="services-box">
+				<div class="services-box services-box--1">
 					<div class="services-box__height">
 						<h3 class="heading-tertiary-light">Website Creation</h3>
 						<div class="services-box__details">
 							<ul>
 								<li>Landing pages</li>
-								<li>Single/multi page site</li>
+								<li>Single/multi page sites</li>
 								<li>Conversion centered</li>
 								<li>Designed for your business</li>
 								<li>One time cost</li>
@@ -82,7 +101,7 @@
 				</div>
 			</div>
 			<div class="col-md-6 services__bs">
-				<div class="services-box">
+				<div class="services-box services-box--2">
 					<div class="services-box__height">
 						<h3 class="heading-tertiary-light">Marketing Package</h3>
 						<div class="services-box__details">
@@ -118,7 +137,7 @@
 							<p class="blog-box__text">
 								The only thing keeping a client from immediately leaving your site is presentation, design trends play a huge role in conversion.
 							</p>
-							<p class="blog-box__read"><a href="#">Read more</a></p>
+							<a class="blog-box__read" href="/blog/5-web-design-trends-in-2018">Read more</a>
 						</div>
 					</div>
 				</div>
@@ -126,11 +145,11 @@
 					<div class="blog-box">
 						<div class="blog-box__height">
 							<div class="blog-box__image blog-box__image--2">&nbsp;</div>
-							<h3 class="heading-tertiary">Creating a contact form with Nodemailer</h3>
+							<h3 class="heading-tertiary">Easy NodeJS contact form</h3>
 							<p class="blog-box__text">
 								Every site needs a contact form nowadays, you can create one easily in your node app using Nodemailer. No PHP needed.
 							</p>
-							<p class="blog-box__read"><a href="#">Read more</a></p>
+							<a class="blog-box__read" href="#">Read more</a>
 						</div>
 					</div>
 				</div>
@@ -138,11 +157,11 @@
 					<div class="blog-box">
 						<div class="blog-box__height">
 							<div class="blog-box__image blog-box__image--3">&nbsp;</div>
-							<h3 class="heading-tertiary">5 web design trends in 2018</h3>
+							<h3 class="heading-tertiary">Learn HTML in 10 Minutes</h3>
 							<p class="blog-box__text">
-								The only thing keeping a client from immediately leaving your site is presentation, design trends play a huge role in conversion.
+								The basics of HTML are easy to grasp. Once you understand the basics, you can do literally everything if you have the creativity.
 							</p>
-							<p class="blog-box__read"><a href="#">Read more</a></p>
+							<a class="blog-box__read" href="#">Read more</a>
 						</div>
 					</div>
 				</div>
@@ -191,8 +210,12 @@
 							</div>
 						</div>
 
+						<div class="form__group">
+							<textarea name="message" id="message" class="form__message" placeholder="Company info / request work / comments..."></textarea>
+						</div>
+
 						<div class="form__group form__submit">
-							<button type="submit" class="form__button btn btn-outline-light">Send</button>
+							<button type="submit" class="form__button">Send</button>
 						</div>
 						<div class="alert">Message has been sent</div>
 					</form>

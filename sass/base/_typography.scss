@@ -37,6 +37,7 @@ body {
 		font-size: 7rem;
 		font-weight: 400;
 		letter-spacing: 2.5rem;
+		margin-right: -2.5rem;
 		text-shadow: 0 2rem 4rem rgba($color-black, .3);
 
 		animation: moveInLeft 1.2s ease-out;
@@ -44,6 +45,7 @@ body {
 		@include respond(smallest) {
 			font-size: 5rem;
 			letter-spacing: 2rem;
+			margin-right: -2rem;
 		}
 	}
 
@@ -52,16 +54,19 @@ body {
 		font-size: 1.5rem;
 		font-weight: 400;
 		letter-spacing: 1.45rem;
+		margin-right: -1.45rem;
 		text-shadow: 0 2rem 4rem rgba($color-black, .3);
 
 		animation: moveInLeft 1.2s ease-out;
 
 		@include respond(phone) {
-            letter-spacing: 1.3rem;
+			letter-spacing: 1.3rem;
+			margin-right: -1.3rem;
         }
 		
 		@include respond(smallest) {
-            letter-spacing: .7rem;
+			letter-spacing: .7rem;
+			margin-right: -.7rem;
         }
 	}
 
@@ -89,6 +94,7 @@ body {
 	font-size: 4rem;
 	text-transform: uppercase;
 	letter-spacing: 1.25rem;
+	margin-right: -1.25rem;
 	color: $color-primary-dark;
 	margin-bottom: 4rem;
 
@@ -107,6 +113,7 @@ body {
 	font-size: 4rem;
 	text-transform: uppercase;
 	letter-spacing: 1.25rem;
+	margin-right: -1.25rem;
 	color: $color-grey-light-1;
 	margin-bottom: 4rem;
 }
@@ -124,5 +131,6 @@ body {
 	text-transform: uppercase;
 	color: $color-grey-light-1;
 	letter-spacing: .5rem;
+	margin-right: -.5rem;
 }
 

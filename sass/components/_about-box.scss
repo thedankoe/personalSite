@@ -35,8 +35,73 @@
         padding-top: 1.3rem;
     }
 
+    &__work {
+        margin: 5rem auto;
+        background-image: linear-gradient(105deg,
+                          rgba($color-primary-light, .9) 50%,
+                          rgba($color-primary-dark, .9) 50%,
+                          rgba($color-primary-dark, .9) 100%),
+                          url(../images/about-web-design.jpg);
+        background-size: cover;
+        background-position: center;
 
-    &:hover {
-        transform: translateY(-1.5rem) scale(1.03);
+        &-text {
+            color: $color-grey-light-1;
+            font-size: 2rem;
+            font-weight: 300;
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            margin-right: -.2rem;
+
+            &--2 {
+                padding-bottom: 2rem;
+                border-bottom: 1px solid $color-grey-light-1;
+
+                @include respond(bs-sm) {
+                    margin-top: 3rem;
+                }
+            }
+        }
+
+        &-button {
+            display: block;
+            margin: 3rem auto;
+            text-transform: uppercase;
+            color: $color-grey-light-1;
+            border: 1px solid $color-grey-light-1;
+            border-radius: 2px;
+            letter-spacing: .2rem;
+            padding: .5rem .8rem .5rem 1rem;
+            transition: all .2s;
+
+            &:hover {
+                color: $color-primary-dark;
+                background-color: $color-grey-light-1;
+                text-decoration: none;
+            }
+        }
+    }
+
+    &__heading {
+        text-transform: uppercase;
+        font-size: 3rem;
+        color: $color-grey-light-1;
+        letter-spacing: .6rem;
+        margin-right: -.6rem;
+        margin-bottom: 3rem;
+    }
+
+    &__social-img {
+
+        img {
+            width: 6rem;
+            height: 6rem;
+        }
+    }
+
+    &__button {
+        text-align: center;
+        width: 100%;
+        margin: 0 auto;
     }
 }

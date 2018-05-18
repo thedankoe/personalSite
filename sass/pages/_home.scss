@@ -52,6 +52,7 @@
 
 .section-about {
 	background-color: $color-grey-light-1;
+	padding-top: 10rem;
 	padding-bottom: 20rem;
 	margin-bottom: -10rem;
 
@@ -72,13 +73,13 @@
 
 .section-services {
 	padding: 10rem 0;
-	height: 60rem;
+	height: 68rem;
 	margin-bottom: -10rem;
 	background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 	transform: skewY(-7deg);
 
 	@include respond(bs-md) {
-		height: 105rem;
+		height: 110rem;
 	}
 
 	.services {
@@ -117,8 +118,8 @@
 	.contact {
 		background-image: linear-gradient(105deg,
 										rgba($color-primary-light, .9) 0%,
-										rgba($color-primary-dark, .9) 50%,
-										transparent 50%),
+										rgba($color-primary-dark, .9) 60%,
+										transparent 60%),
 									url(../images/contact-web-design.jpg);
 		background-size: cover;
 		border-radius: 3px;
@@ -131,13 +132,24 @@
 										transparent 75%),
 									url(../images/contact-web-design.jpg);
 		}
+		
+		@include respond(smallest) {
+			background-image: linear-gradient(to right,
+										rgba($color-primary-light, .9),
+										rgba($color-primary-dark, .9)),
+									url(../images/contact-web-design.jpg);
+		}
 	
 		&__form {
-			width: 50%;
+			width: 65%;
 			padding: 6rem;
 
 			@include respond(bs-md) {
-				width: 80%;
+				width: 90%;
+			}
+			
+			@include respond(smallest) {
+				width: 100%;
 			}
 		}
 	}

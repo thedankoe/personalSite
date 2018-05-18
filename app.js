@@ -32,6 +32,8 @@ app.post('/', (req, res) => {
       <li>Website creation: ${req.body.website}</li>
       <li>Marketing package: ${req.body.marketing}</li>
     </ul>
+    <h3>Message</h3>
+    <p>${req.body.message}</p>
   `;
 
   let transporter = nodemailer.createTransport({
@@ -72,8 +74,12 @@ app.post('/', (req, res) => {
   });
 });
 
-app.get('/blog', (req,res) => {
+app.get('/blog', (req, res) => {
   res.render('blog');
+});
+
+app.get('/blog/5-web-design-trends-in-2018', (req, res) => {
+  res.render('5-web-design-trends-in-2018');
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){

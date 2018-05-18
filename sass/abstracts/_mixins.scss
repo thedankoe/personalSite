@@ -20,6 +20,9 @@ ORDER: Base + typography > general layout + grid > page layout > components
     @if $breakpoint == smallest {
         @media (max-width: 28.125em) { @content }; //450px
     }
+    @if $breakpoint == bs-sm {
+        @media (max-width: 36em) { @content }; //576px
+    }
     @if $breakpoint == phone {
         @media (max-width: 37.5em) { @content }; //600px
     }

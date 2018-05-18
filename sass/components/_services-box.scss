@@ -1,52 +1,116 @@
 .services-box {
     text-align: center;
     color: $color-grey-light-1;
+    background-color: $color-primary-light;
+    padding: 2rem;
+
+    &--1 {
+        background-image: linear-gradient(105deg,
+                          rgba($color-primary-dark, .9) 0%,
+                          rgba($color-primary-dark, .9) 75%,
+                          transparent 75%),
+                          url(../images/services-website-creation.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    }
+
+    &--2 {
+        background-image: linear-gradient(105deg,
+                          rgba($color-primary-dark, .95) 0%,
+                          rgba($color-primary-dark, .95) 75%,
+                          transparent 75%),
+                          url(../images/services-marketing-package.jpg);
+        background-size: cover;
+        background-position: center;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    }
+
+    &__height {
+        height: 27rem;
+        transition: all .3s;
+
+        @include respond(tab-land) {
+            height: 30rem;
+        }
+    }
 
     ul {
         list-style: none;
-        width: 70%;
+        width: 80%;
         margin: 0 auto;
         border-radius: 3px;
         transition: all .4s;
 
         li {
             text-align: center;
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             padding: 1rem;
+
+            @include respond(tab-land) {
+                font-size: 1.6rem;
+            }
         }
 
         a {
             opacity: 0;
+            visibility: hidden;
             text-decoration: none;
             text-transform: uppercase;
             letter-spacing: .6rem;
             font-weight: 700;
             color: $color-grey-light-1;
-            padding:1.5rem;
+            border: 1px solid $color-grey-light-1;
+            padding:1.5rem .9rem 1.5rem 1.5rem;
             border-radius: 2px;
             transition: all .4s;
 
-            @include respond(bs-md) {
-                display: block;
+            @include respond(tab-land) {
                 opacity: 1;
-                background-color: $color-primary-dark;
+                visibility: visible;
+            }
+
+            @include respond(tab-port) {
+                width: 75%;
+                display: block;
+                font-size: 1.4rem;
+                padding: 1rem .4rem 1rem 1rem;
+                margin: 0 auto;
+            }
+
+            @include respond(bs-md) {
+                width: 60%;
             }
 
             &:hover {
-                background-color: $color-primary-dark;
+                background-color: $color-grey-light-1;
+                color: $color-primary-dark;
             }
-        }
-        &:hover {
-            background-color: rgba($color-grey-light-1, .1);
-        }
-
-        &:hover a {
-            opacity: 1;
         }
     }
 
+    &:hover {
+        transition: .4s;
+        transform: translateY(-1.5rem) scale(1.03);
+    }
+
+    &:hover &__height {
+        height: 32rem;
+
+        @include respond(tab-land) {
+            height: 30rem;
+        }
+    }
+
+    &:hover a {
+        opacity: 1;
+        visibility: visible;
+    }
+
     &__button {
-        margin-top: -2rem;
+        margin-top: 4rem;
         z-index: 1000;
 
         @include respond(bs-md) {
