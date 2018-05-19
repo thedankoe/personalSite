@@ -35,6 +35,10 @@
         @include respond(tab-land) {
             height: 30rem;
         }
+
+        @include respond(smallest) {
+            height: 32rem;
+        }
     }
 
     ul {
@@ -101,6 +105,10 @@
 
         @include respond(tab-land) {
             height: 30rem;
+        }
+
+        @include respond(smallest) {
+            height: 32rem;
         }
     }
 

@@ -19,7 +19,6 @@
 	}
 	
 	@include respond(phone) {
-		height: 90vh;
 		background-image: linear-gradient(to right bottom,
                                     rgba($color-primary-light, .9),
                                     rgba($color-primary-dark, .9)),
@@ -52,7 +51,7 @@
 
 .section-about {
 	background-color: $color-grey-light-1;
-	padding-top: 10rem;
+	padding-top: 0rem;
 	padding-bottom: 20rem;
 	margin-bottom: -10rem;
 
@@ -65,14 +64,14 @@
 
 		&__bs {
 			@include respond(bs-md) {
-				margin: 3rem 0;
+				margin: -2rem 0;
 			}
 		}
 	}
 }
 
 .section-services {
-	padding: 10rem 0;
+	padding: 5rem 0 10rem 0;
 	height: 68rem;
 	margin-bottom: -10rem;
 	background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
@@ -80,6 +79,10 @@
 
 	@include respond(bs-md) {
 		height: 110rem;
+	}
+
+	@include respond(smallest) {
+		height: 115rem;
 	}
 
 	.services {
@@ -97,7 +100,7 @@
 }
 
 .section-blog {
-	padding-top: 30rem;
+	padding-top: 20rem;
 	padding-bottom: 10rem;
 	background-color: $color-grey-light-1;
 
@@ -112,7 +115,7 @@
 }
 
 .section-contact {
-	padding: 15rem 0;
+	padding: 10rem 0 15rem 0;
 	background-color: $color-grey-light-1;
 
 	.contact {

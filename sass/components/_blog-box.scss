@@ -8,19 +8,23 @@
     transition: all .3s;
 
     &__height {
-        height: 36rem;
+        height: 34rem;
         transition: all .3s;
 
         @include respond(tab-land) {
-            height: 45rem;
+            height: 43rem;
         }
 
         @include respond(bs-nav) {
-            height: 50rem;
+            height: 48rem;
+        }
+
+        @include respond(tab-port) {
+            height: 45rem;
         }
 
         @include respond(bs-md) {
-            height: 40rem;
+            height: 39rem;
         }
     }
 
@@ -112,18 +116,22 @@
     }
 
     &:hover &__height {
-        height: 40rem;
+        height: 38rem;
 
         @include respond(tab-land) {
-            height: 45rem;
+            height: 43rem;
         }
 
         @include respond(bs-nav) {
-            height: 50rem;
+            height: 48rem;
+        }
+
+        @include respond(tab-port) {
+            height: 45rem;
         }
 
         @include respond(bs-md) {
-            height: 40rem;
+            height: 39rem;
         }
     }
 }
