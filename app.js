@@ -1,9 +1,8 @@
-const path = require("path");
 const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const auth =  require('./config/secrets');
+// const auth =  require('./config/secrets');
 const port = process.env.PORT || 8081;
 
 //Body parser middleware
