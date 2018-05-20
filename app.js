@@ -2,7 +2,8 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-// const auth =  require('./config/secrets');
+const EMAIL_USER = process.env.EMAIL_USER;
+const EMAIL_PASS = process.env.EMAIL_PASS;
 const port = process.env.PORT || 8081;
 
 //Body parser middleware
@@ -40,8 +41,8 @@ app.post('/', (req, res) => {
       port: 465,
       secure: true, // true for 465, false for other ports
       auth: {
-          user: auth.emailUser,
-          pass: auth.emailPass
+          user: EMAIL_USER,
+          pass: EMAIL_PASS
       },
       tls: {
         rejectUnauthorized: false
