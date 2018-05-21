@@ -2,27 +2,27 @@
 	height: 100vh;
 	padding: 5rem;
 	background-image: linear-gradient(105deg,
-                                    rgba($color-primary-light, .9) 0%,
-                                    rgba($color-primary-dark, .9) 50%,
+                                    rgba($color-primary-light, .8) 0%,
+                                    rgba($color-primary-dark, .8) 50%,
                                     transparent 50%),
 								url(../images/hero-image.jpg);
 	background-size: cover;
-	background-position: top;
+	background-position: center;
 	position: relative;
 
 	@include respond(tab-port) {
 		background-image: linear-gradient(105deg,
-                                    rgba($color-primary-light, .9) 0%,
-                                    rgba($color-primary-dark, .9) 70%,
+                                    rgba($color-primary-light, .8) 0%,
+                                    rgba($color-primary-dark, .8) 70%,
                                     transparent 70%),
 								url(../images/hero-image.jpg);
 	}
 	
 	@include respond(phone) {
 		background-image: linear-gradient(to right bottom,
-                                    rgba($color-primary-light, .9),
-                                    rgba($color-primary-dark, .9)),
-									url(../images/hero-image.jpg);
+                                    rgba($color-primary-light, .8),
+                                    rgba($color-primary-dark, .8)),
+									url(../images/hero-image-mobile.jpg);
 	}
 
 	&__name {

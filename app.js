@@ -2,8 +2,9 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const EMAIL_USER = process.env.EMAIL_USER;
-const EMAIL_PASS = process.env.EMAIL_PASS;
+const mg = require('nodemailer-mailgun-transport');
+const username = process.env.PROTON_USER;
+const password = process.env.PROTON_PASS;
 const port = process.env.PORT || 8081;
 
 //Body parser middleware
@@ -37,12 +38,12 @@ app.post('/', (req, res) => {
   `;
 
   let transporter = nodemailer.createTransport({
-      host: 'box5667.bluehost.com',
-      port: 465,
-      secure: true, // true for 465, false for other ports
+      host: '127.0.0.1',
+      port: 1025,
+      secure: false,
       auth: {
-          user: EMAIL_USER,
-          pass: EMAIL_PASS
+          user: 'username',
+          pass: 'password'
       },
       tls: {
         rejectUnauthorized: false
@@ -51,8 +52,8 @@ app.post('/', (req, res) => {
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Site Inquiry" <dan@thedankoe.com>', // sender address
-      to: 'thedankoe@gmail.com', // list of receivers
+      from: '"Site Inquiry" <thedankoe@protonmail.com>', // sender address
+      to: 'thedankoe@protonmail.com', // list of receivers
       subject: 'New Inquiry', // Subject line
       text: output, // plain text body
       html: output // html body
@@ -82,10 +83,7 @@ app.get('/blog/5-web-design-trends-in-2018', (req, res) => {
   res.render('5-web-design-trends-in-2018');
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
+app.listen(port, process.env.IP, function(){
    console.log("Server has started");
 });
 
-// app.listen(port, () => {
-//   console.log('Server started on http://localhost:' + port);
-// });

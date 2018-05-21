@@ -1,13 +1,12 @@
 .services-box {
     text-align: center;
-    color: $color-grey-light-1;
-    background-color: $color-primary-light;
+    color: $color-primary-dark;
     padding: 2rem;
 
     &--1 {
         background-image: linear-gradient(105deg,
-                          rgba($color-primary-dark, .9) 0%,
-                          rgba($color-primary-dark, .9) 75%,
+                          rgba($color-grey-light-1, .85) 0%,
+                          rgba($color-grey-light-1, .85) 75%,
                           transparent 75%),
                           url(../images/services-website-creation.jpg);
         background-size: cover;
@@ -18,8 +17,8 @@
 
     &--2 {
         background-image: linear-gradient(105deg,
-                          rgba($color-primary-dark, .95) 0%,
-                          rgba($color-primary-dark, .95) 75%,
+                          rgba($color-grey-light-1, .85) 0%,
+                          rgba($color-grey-light-1, .85) 75%,
                           transparent 75%),
                           url(../images/services-marketing-package.jpg);
         background-size: cover;
@@ -65,8 +64,8 @@
             text-transform: uppercase;
             letter-spacing: .6rem;
             font-weight: 700;
-            color: $color-grey-light-1;
-            border: 1px solid $color-grey-light-1;
+            color: $color-primary-dark;
+            border: 1px solid $color-primary-dark;
             padding:1.5rem .9rem 1.5rem 1.5rem;
             border-radius: 2px;
             transition: all .4s;
@@ -89,8 +88,8 @@
             }
 
             &:hover {
-                background-color: $color-grey-light-1;
-                color: $color-primary-dark;
+                background-color: $color-primary-dark;
+                color: $color-grey-light-1;
             }
         }
     }
