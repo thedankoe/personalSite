@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const mg = require('nodemailer-mailgun-transport');
 const username = process.env.PROTON_USER;
 const password = process.env.PROTON_PASS;
 const port = process.env.PORT || 8081;
@@ -42,8 +41,8 @@ app.post('/', (req, res) => {
       port: 1025,
       secure: false,
       auth: {
-          user: 'username',
-          pass: 'password'
+          user: username,
+          pass: password
       },
       tls: {
         rejectUnauthorized: false
