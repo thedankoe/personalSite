@@ -1,9 +1,8 @@
 const express = require("express");
 const app = express();
+const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
-const username = process.env.PROTON_USER;
-const password = process.env.PROTON_PASS;
 const port = process.env.PORT || 8081;
 
 //Body parser middleware
@@ -41,8 +40,8 @@ app.post('/', (req, res) => {
       port: 1025,
       secure: false,
       auth: {
-          user: username,
-          pass: password
+          user: process.env.EMAIL_USER,
+          pass: process.env.EMAIL_PASS
       },
       tls: {
         rejectUnauthorized: false
