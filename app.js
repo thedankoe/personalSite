@@ -50,8 +50,8 @@ app.post('/', (req, res) => {
 
   // setup email data with unicode symbols
   let mailOptions = {
-      from: '"Site Inquiry" <thedankoe@protonmail.com>', // sender address
-      to: 'thedankoe@protonmail.com', // list of receivers
+      from: '"Site Inquiry" <contact@thedankoe.com>', // sender address
+      to: 'contact@thedankoe.com', // list of receivers
       subject: 'New Inquiry', // Subject line
       text: output, // plain text body
       html: output // html body
