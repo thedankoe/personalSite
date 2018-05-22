@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const dotenv = require('dotenv').config();
 const bodyParser = require('body-parser');
-const nodemailer = require('nodemailer');
 const port = process.env.PORT || 8081;
 
 //Body parser middleware
@@ -35,41 +34,25 @@ app.post('/', (req, res) => {
     <p>${req.body.message}</p>
   `;
 
-  let transporter = nodemailer.createTransport({
-      host: '127.0.0.1',
-      port: 1025,
-      secure: false,
-      auth: {
-          user: process.env.EMAIL_USER,
-          pass: process.env.EMAIL_PASS
-      },
-      tls: {
-        rejectUnauthorized: false
-      }
-  });
-
-  // setup email data with unicode symbols
-  let mailOptions = {
-      from: '"Site Inquiry" <contact@thedankoe.com>', // sender address
-      to: 'contact@thedankoe.com', // list of receivers
-      subject: 'New Inquiry', // Subject line
-      text: output, // plain text body
-      html: output // html body
+  var api_key = process.env.API_KEY;
+  var domain = 'thedankoe.com';
+  var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
+  
+  var data = {
+    from: 'Mailgun <thedankoe@gmail.com>',
+    to: 'thedankoe@gmail.com',
+    subject: 'Site Inquiry',
+    text: 'Site Inquiry',
+    html: output
   };
-
-  // send mail with defined transport object
-  transporter.sendMail(mailOptions, (error, info) => {
-    
-      if (error) {
-          return console.log(error);
-      } else {
-        console.log(req.body);
-        console.log('Message sent: %s', info.messageId);
-        console.log('Preview URL: %s', nodemailer.getTestMessageUrl(info));
-
-        res.redirect('/#contact');
-      }
-
+  
+  mailgun.messages().send(data, function (error, body) {
+    if(error) {
+      console.log(error);
+    } else {
+      console.log(body);
+      res.redirect('/#contact');
+    }
   });
 });
 
