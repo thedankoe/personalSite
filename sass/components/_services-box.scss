@@ -83,6 +83,8 @@
 
             @include respond(bs-md) {
                 width: 16rem;
+                letter-spacing: .3rem;
+                padding-right: .1rem;
             }
 
             &:hover {

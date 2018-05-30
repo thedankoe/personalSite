@@ -449,7 +449,9 @@ body {
           margin: 0 auto; } }
       @media only screen and (max-width: 48em) {
         .services-box ul a {
-          width: 16rem; } }
+          width: 16rem;
+          letter-spacing: .3rem;
+          padding-right: .1rem; } }
       .services-box ul a:hover {
         background-color: #232526;
         color: #f7f7f7; }
@@ -511,7 +513,8 @@ body {
         width: 60rem; } }
     @media only screen and (max-width: 37.5em) {
       .work__option {
-        width: 42rem; } }
+        width: 42rem;
+        align-items: flex-start; } }
     .work__option--1 {
       padding: 5rem 7rem;
       margin-left: 6.75rem;
@@ -523,6 +526,9 @@ body {
       @media only screen and (max-width: 56.25em) {
         .work__option--1 {
           padding: 5rem 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .work__option--1 {
+          padding: 5rem 1rem; } }
     .work__option--2 {
       padding: 5rem 10rem;
       background-image: linear-gradient(to right bottom, rgba(255, 51, 102, 0.8), rgba(186, 38, 93, 0.8)), url(../images/work-hotel-template.png); }
@@ -532,6 +538,9 @@ body {
       @media only screen and (max-width: 56.25em) {
         .work__option--2 {
           padding: 5rem 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .work__option--2 {
+          padding: 5rem 1rem; } }
     .work__option--3 {
       padding: 5rem 12rem;
       background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
@@ -541,6 +550,9 @@ body {
       @media only screen and (max-width: 56.25em) {
         .work__option--3 {
           padding: 5rem 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .work__option--3 {
+          padding: 5rem 1rem; } }
     .work__option--4 {
       padding: 5rem 7.5rem;
       margin-right: 6.75rem;
@@ -552,6 +564,9 @@ body {
       @media only screen and (max-width: 56.25em) {
         .work__option--4 {
           padding: 5rem 3rem; } }
+      @media only screen and (max-width: 37.5em) {
+        .work__option--4 {
+          padding: 5rem 1rem; } }
     .work__option--1, .work__option--3 {
       margin-right: 1rem; }
       @media only screen and (max-width: 56.25em) {
@@ -791,7 +806,7 @@ body {
 .section-services {
   padding: 5rem 5rem 10rem 5rem;
   margin-bottom: -10rem;
-  background-image: linear-gradient(to right bottom, #414345, #232526);
+  background-image: linear-gradient(to right bottom, rgba(65, 67, 69, 0.9), rgba(35, 37, 38, 0.9));
   transform: skewY(-7deg); }
   @media only screen and (max-width: 48em) {
     .section-services .services__bs {

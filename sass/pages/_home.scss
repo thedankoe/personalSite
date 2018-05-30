@@ -78,7 +78,7 @@
 .section-services {
 	padding: 5rem 5rem 10rem 5rem;
 	margin-bottom: -10rem;
-	background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
+	background-image: linear-gradient(to right bottom, rgba($color-primary-light, .9), rgba($color-primary-dark, .9));
 	transform: skewY(-7deg);
 
 	.services {
