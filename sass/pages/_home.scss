@@ -53,42 +53,38 @@
 	background-color: $color-grey-light-1;
 	padding-top: 0rem;
 	padding-bottom: 20rem;
-	margin-bottom: -10rem;
+	margin-bottom: -5rem;
 
 	@include respond(tab-port) {
 		padding-bottom: 13rem;
 	}
 
 	.about {
-		padding: 10rem 0;
+		width: 90%;
+		margin: 0 auto;
+		padding-top: 10rem;
 
-		&__bs {
-			@include respond(bs-md) {
-				margin: -.5rem 0;
-			}
+		display: flex;
+		justify-content: center;
+		align-items: flex-start;
+		flex-wrap: wrap;
+
+		&__heading {
+			flex: 0 0 100%;
 		}
 	}
 }
 
 .section-services {
-	padding: 5rem 0 10rem 0;
-	height: 68rem;
+	padding: 5rem 5rem 10rem 5rem;
 	margin-bottom: -10rem;
 	background-image: linear-gradient(to right bottom, $color-primary-light, $color-primary-dark);
 	transform: skewY(-7deg);
 
-	@include respond(bs-md) {
-		height: 110rem;
-	}
-
-	@include respond(smallest) {
-		height: 115rem;
-	}
-
 	.services {
 		&__bs {
 			@include respond(bs-md) {
-				margin: 3rem 0;
+				margin: 2rem 0;
 			}
 		}
 	}
@@ -101,16 +97,21 @@
 
 .section-blog {
 	padding-top: 20rem;
-	padding-bottom: 10rem;
+	padding-bottom: 5rem;
 	background-color: $color-grey-light-1;
 
-	.blog {
-		&__bs {
+	display: flex;
+	justify-content: center;
+	align-items: stretch;
+	flex-wrap: wrap;
 
-			@include respond(bs-md) {
-				margin: 3rem 0;
-			}
-		}
+	@include respond(bs-nav) {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	&__heading {
+		flex: 0 0 100%;
 	}
 }
 

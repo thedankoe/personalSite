@@ -5,25 +5,26 @@
 
     &--1 {
         background-image: linear-gradient(105deg,
-                          rgba($color-grey-light-1, .85) 0%,
-                          rgba($color-grey-light-1, .85) 75%,
-                          transparent 75%),
-                          url(../images/services-website-creation.jpg);
+                            rgba($color-grey-light-1, .85) 0%,
+                            rgba($color-grey-light-1, .85) 50%,
+                            rgba($color-grey-light-3, .85) 50%,
+                            rgba($color-grey-light-3, .85) 100%),
+                            url(../images/services-website-creation.jpg);
         background-size: cover;
         background-position: center;
-        border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+
     }
 
     &--2 {
         background-image: linear-gradient(105deg,
-                          rgba($color-grey-light-1, .85) 0%,
-                          rgba($color-grey-light-1, .85) 75%,
-                          transparent 75%),
-                          url(../images/services-marketing-package.jpg);
+                            rgba($color-grey-light-1, .85) 0%,
+                            rgba($color-grey-light-1, .85) 50%,
+                            rgba($color-grey-light-3, .85) 50%,
+                            rgba($color-grey-light-3, .85) 100%),
+                            url(../images/services-marketing-package.jpg);
         background-size: cover;
         background-position: center;
-        border-radius: 3px;
         box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
     }
 
@@ -32,11 +33,7 @@
         transition: all .3s;
 
         @include respond(tab-land) {
-            height: 30rem;
-        }
-
-        @include respond(smallest) {
-            height: 32rem;
+            height: auto;
         }
     }
 
@@ -45,6 +42,7 @@
         width: 80%;
         margin: 0 auto;
         border-radius: 3px;
+        color: $color-primary-dark;
         transition: all .4s;
 
         li {
@@ -84,7 +82,7 @@
             }
 
             @include respond(bs-md) {
-                width: 60%;
+                width: 16rem;
             }
 
             &:hover {
@@ -103,11 +101,7 @@
         height: 32rem;
 
         @include respond(tab-land) {
-            height: 30rem;
-        }
-
-        @include respond(smallest) {
-            height: 32rem;
+            height: auto;
         }
     }
 
@@ -121,7 +115,7 @@
         z-index: 1000;
 
         @include respond(bs-md) {
-            margin-top: 0;
+            margin-top: 2rem;
         }
     }
 

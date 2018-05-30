@@ -21,11 +21,11 @@
         &:focus {
             outline: none;
             box-shadow: 0 1rem 2rem rgba($color-black, .1);
-            border-bottom: 3px solid $color-secondary-light;
+            border-bottom: 3px solid $color-success;
         }
 
         &:focus:invalid {
-            border-bottom: 3px solid $color-secondary-dark;
+            border-bottom: 3px solid $color-warning;
         }
 
         &::-webkit-input-placeholder {
@@ -154,7 +154,7 @@
     .alert {
         display: none;
         color: $color-grey-light-1;
-        background-color: rgba($color-secondary-light, .5);
+        background-color: rgba($color-success, .5);
         font-size: 1.8rem;
         transform: translateY(-.1rem);
         transition: .2s;

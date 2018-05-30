@@ -4,110 +4,25 @@
     text-align: center;
     border-radius: 3px;
     transition: transform .3s;
+    
+    flex: 0 0 33.333333%;
 
-    @include respond(bs-md) {
-        width: 75%;
-        margin: 0 auto;
-    }
-
-    &__height {
-        height: 25rem;
-
-        @include respond(bs-md) {
-            height: 23rem;
-        }
-
-        @include respond(smallest) {
-            height: 25rem;
-        }
+    @include respond(tab-port) {
+        width: 50%;
+        flex: 0 0 100%;
     }
 
     &__icon {
-        font-size: 6rem;
-        margin-bottom: .5rem;
-        display: inline-block;
-        background-image:linear-gradient(to right,
-        rgba($color-primary-light, 0.8),
-        rgba($color-primary-dark, 0.8));
-        -webkit-background-clip: text;
-        background-clip: text;
-        color: transparent;
-
-        @include respond(bs-md) {
-            font-size: 8rem;
-        }
+        display: block;
+        margin: 0 auto 4rem auto;
+        width: 8rem;
+        height: 8rem;
+        fill: $color-primary-dark;
     }
 
     &__text {
+        font-size: 1.8rem;
         padding-top: 1.3rem;
-    }
-
-    &__work {
-        margin: 5rem auto;
-        padding: 2.5rem;
-        text-align: center;
-        background-image: linear-gradient(105deg,
-                          rgba($color-primary-light, .9) 50%,
-                          rgba($color-primary-dark, .9) 50%,
-                          rgba($color-primary-dark, .9) 100%),
-                          url(../images/about-web-design.jpg);
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
-
-        &-text {
-            color: $color-grey-light-1;
-            font-size: 2rem;
-            font-weight: 300;
-            text-transform: uppercase;
-            letter-spacing: .2rem;
-            margin-right: -.2rem;
-
-            &--2 {
-                padding-bottom: 2rem;
-                border-bottom: 1px solid $color-grey-light-1;
-
-                @include respond(bs-sm) {
-                    margin-top: 3rem;
-                }
-            }
-        }
-
-        &-button {
-            display: block;
-            font-size: 2rem;
-            margin: 3rem auto;
-            text-transform: uppercase;
-            color: $color-grey-light-1;
-            border: 1px solid $color-grey-light-1;
-            border-radius: 2px;
-            letter-spacing: .2rem;
-            padding: .5rem .8rem .5rem 1rem;
-            transition: all .2s;
-
-            &:hover {
-                color: $color-primary-dark;
-                background-color: $color-grey-light-1;
-                text-decoration: none;
-            }
-        }
-    }
-
-    &__heading {
-        text-transform: uppercase;
-        font-size: 3rem;
-        color: $color-grey-light-1;
-        letter-spacing: .6rem;
-        margin-right: -.6rem;
-        margin-bottom: 3rem;
-    }
-
-    &__social-img {
-
-        img {
-            width: 6rem;
-            height: 6rem;
-        }
     }
 
     &__button {
