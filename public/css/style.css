@@ -37,7 +37,7 @@ ORDER: Base + typography > general layout + grid > page layout > components
     opacity: 0;
     transform: translateX(-10rem); }
   100% {
-    opacity: 0;
+    opacity: 1;
     transform: translateX(0rem); } }
 
 @keyframes fadeOutRight {
@@ -516,6 +516,10 @@ body {
   justify-content: center;
   align-items: center;
   flex-wrap: wrap; }
+  .work__animation-2 .fadeInLeft {
+    animation: fadeInLeft .4s; }
+  .work__animation-2 .fadeInRight {
+    animation: fadeInRight .4s; }
 
 .work__option-2 {
   width: 49.5%;
@@ -523,18 +527,21 @@ body {
   padding-top: 4.5rem;
   padding-bottom: 4.5rem;
   text-align: center;
-  color: #232526;
+  color: #f7f7f7;
   transition: all .2s;
   background-image: linear-gradient(to right bottom, #414345, #232526);
   display: flex;
   justify-content: center;
   align-items: center; }
   .work__option-2:hover {
+    color: #f7f7f7;
+    text-decoration: none;
     transform: scale(1.05);
     box-shadow: 0 1rem 1.5rem rgba(0, 0, 0, 0.15); }
 
 .work__text-2 {
-  font-size: 2.2rem;
+  font-size: 2.5rem;
+  text-transform: uppercase;
   letter-spacing: .4rem; }
   .work__text-2--sub {
     font-size: 1.6rem; }
@@ -550,9 +557,7 @@ body {
     text-decoration: none; }
   .work__choice {
     margin-bottom: 2rem;
-    font-size: 2rem;
     text-transform: uppercase;
-    color: #232526;
     transition: all .2s;
     display: flex;
     justify-content: space-evenly;
@@ -567,6 +572,9 @@ body {
         font-size: 1.5rem; } }
     .work__choice-opt {
       display: inline-block;
+      color: #232526;
+      font-size: 2rem;
+      text-decoration: none;
       transition: all .2s; }
       @media only screen and (max-width: 56.25em) {
         .work__choice-opt {
@@ -575,6 +583,8 @@ body {
       .work__choice-opt:hover {
         transform: scale(1.1);
         letter-spacing: .3rem;
+        text-decoration: none;
+        color: #232526;
         text-shadow: 0 0.8rem 0.8rem rgba(0, 0, 0, 0.2); }
       .work__choice-opt a {
         color: #232526; }
@@ -582,12 +592,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    animation: fadeOut 1s; }
+    align-items: center; }
     .work__animation .fadeOutRight {
-      animation: fadeOutRight 1s; }
+      animation: fadeOutRight .4s; }
     .work__animation .fadeOutLeft {
-      animation: fadeOutLeft 1s; }
+      animation: fadeOutLeft .4s; }
   .work__heading {
     flex: 0 0 100%; }
   .work__option {

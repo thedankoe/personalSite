@@ -1,4 +1,5 @@
-import { renderPortfolio } from './views/portfolioView';
+import Portfolio from './models/Portfolio';
+import { renderPortfolio, getRender } from './views/portfolioView';
 import { elements, clearWork } from './views/base';
 
 $(document).ready(function() {
@@ -26,7 +27,13 @@ $(document).ready(function() {
 		});
 	});
 });
-	
+
+//////////////////////////
+//  GLOBAL APP CONTROL  //
+//////////////////////////
+
+const state = {};
+window.state = state;
 
 //////////////////////////
 //     FORM CONTROL     //
@@ -48,16 +55,39 @@ const submitForm = () => {
 //////////////////////////
 //  PORTFOLIO CONTROL  //
 //////////////////////////
-elements.workDisplay.addEventListener('click', e => {
-	// 1. Clear previous block
-	clearWork();
+if (!state.type) {
+	elements.workDisplay.addEventListener('click', e => {
+		// 1. Add animation
+		if (!state.type && e.target.matches('.work__choice-opt')) {
+			for (let i = 0; i < 2; i++) {
+				elements.animationRight[i].classList.add('fadeOutRight');
+				elements.animationLeft[i].classList.add('fadeOutLeft');
+			}
+			// Add to state
+			state.type = new Portfolio;
+		} 
+	
+		// 2. Clear previous block
+		clearWork();
+	
+		// 3. Display new block
+		getRender(e);
+	});
+} else if (state.type) {
+	elements.workDisplay.addEventListener('click', e => {
+		// 1. Add animation
+		if (e.target.matches('.work__choice-opt')) {
+			for (let i = 0; i < 2; i++) {
+				elements.animationRight[i].classList.add('fadeOutRight');
+				elements.animationLeft[i].classList.add('fadeOutLeft');
+			}
+		}
+	
+		// 2. Clear previous block
+		clearWork();
+	
+		// 3. Display new block
+		getRender(e);
+	});
+}
 
-	// 2. Display new block
-	if (e.target.matches('.work__choice-opt--1')) {
-		renderPortfolio(workClient);
-	} else if (e.target.matches('.work__choice-opt--2')) {
-		renderPortfolio(workFullstack);
-	} else if (e.target.matches('.work__choice-opt--3')) {
-		renderPortfolio(workJavascript);
-	}
-});
