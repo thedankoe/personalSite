@@ -86,7 +86,19 @@ export const renderPortfolio = choice => {
 }
 
 export const getRender = e => {
-    setTimeout(() => {
+    let count = 0;
+    if (count === 0) {
+        setTimeout(() => {
+            if (e.target.matches('.work__choice-opt--1')) {
+                renderPortfolio('workClient');
+            } else if (e.target.matches('.work__choice-opt--2')) {
+                renderPortfolio('workFullstack');
+            } else if (e.target.matches('.work__choice-opt--3')) {
+                renderPortfolio('workJavascript');
+            }
+            count = 1;
+        }, 400);
+    } else if (count === 1) {
         if (e.target.matches('.work__choice-opt--1')) {
             renderPortfolio('workClient');
         } else if (e.target.matches('.work__choice-opt--2')) {
@@ -94,5 +106,5 @@ export const getRender = e => {
         } else if (e.target.matches('.work__choice-opt--3')) {
             renderPortfolio('workJavascript');
         }
-    }, 400);
+    }
 };

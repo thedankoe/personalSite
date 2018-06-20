@@ -13,11 +13,11 @@ export const elements = {
 export const clearWork = () => {
     const work = document.querySelector('.work__animation');
     const work2 = document.querySelector('.work__animation-2');
-    setTimeout(() => {
-        if (work) {
+    if (work) {
+        setTimeout(() => {
             work.parentElement.removeChild(work);
-        } else if (work2) {
-            work2.parentElement.removeChild(work2);
-        }
-    }, 400);
+        }, 400);
+    } else if (work2) {
+        work2.parentElement.removeChild(work2);
+    }
 };

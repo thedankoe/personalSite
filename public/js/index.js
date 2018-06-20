@@ -1,4 +1,3 @@
-import Portfolio from './models/Portfolio';
 import { renderPortfolio, getRender } from './views/portfolioView';
 import { elements, clearWork } from './views/base';
 
@@ -55,16 +54,16 @@ const submitForm = () => {
 //////////////////////////
 //  PORTFOLIO CONTROL  //
 //////////////////////////
-if (!state.type) {
+const clickCount = 0;
+
+if (clickCount === 0) {
 	elements.workDisplay.addEventListener('click', e => {
 		// 1. Add animation
-		if (!state.type && e.target.matches('.work__choice-opt')) {
+		if (e.target.matches('.work__choice-opt')) {
 			for (let i = 0; i < 2; i++) {
 				elements.animationRight[i].classList.add('fadeOutRight');
 				elements.animationLeft[i].classList.add('fadeOutLeft');
 			}
-			// Add to state
-			state.type = new Portfolio;
 		} 
 	
 		// 2. Clear previous block
@@ -73,7 +72,7 @@ if (!state.type) {
 		// 3. Display new block
 		getRender(e);
 	});
-} else if (state.type) {
+} else if (clickCount === 1) {
 	elements.workDisplay.addEventListener('click', e => {
 		// 1. Add animation
 		if (e.target.matches('.work__choice-opt')) {
@@ -81,7 +80,7 @@ if (!state.type) {
 				elements.animationRight[i].classList.add('fadeOutRight');
 				elements.animationLeft[i].classList.add('fadeOutLeft');
 			}
-		}
+		} 
 	
 		// 2. Clear previous block
 		clearWork();
@@ -90,4 +89,6 @@ if (!state.type) {
 		getRender(e);
 	});
 }
+
+
 

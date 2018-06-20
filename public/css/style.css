@@ -256,7 +256,6 @@ body {
     margin: 0 auto; }
 
 .blog-card {
-  flex: 0 0 30%;
   margin: 0 1rem;
   background-color: #fff;
   box-shadow: 0 1.5rem 3rem rgba(0, 0, 0, 0.15);
@@ -277,15 +276,15 @@ body {
       width: 95%; } }
   .blog-card__picture {
     width: 100%;
-    height: 23rem;
+    height: 28rem;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
     clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%); }
   .blog-card__heading {
-    padding: 0 2rem;
-    margin-top: 1.5rem; }
+    padding: 0 3rem;
+    margin-top: 2.5rem; }
   .blog-card__text {
     color: #414345;
-    padding: 0 2rem;
+    padding: 0 3rem;
     margin: 1.5rem 0;
     font-size: 1.5rem; }
   .blog-card__link:hover {
@@ -493,9 +492,6 @@ body {
       .services-box ul a:hover {
         background-color: #232526;
         color: #f7f7f7; }
-  .services-box:hover {
-    transition: .4s;
-    transform: translateY(-1.5rem) scale(1.03); }
   .services-box:hover .services-box__height {
     height: 32rem; }
     @media only screen and (max-width: 75em) {
@@ -520,6 +516,10 @@ body {
     animation: fadeInLeft .4s; }
   .work__animation-2 .fadeInRight {
     animation: fadeInRight .4s; }
+  .work__animation-2 .fadeOutRight {
+    animation: fadeOutRight .4s; }
+  .work__animation-2 .fadeOutLeft {
+    animation: fadeOutLeft .4s; }
 
 .work__option-2 {
   width: 49.5%;
@@ -609,6 +609,7 @@ body {
     overflow: hidden;
     background-size: cover;
     background-position: center;
+    text-shadow: 0 0.3rem 1rem rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -624,12 +625,11 @@ body {
         width: 60rem; } }
     @media only screen and (max-width: 37.5em) {
       .work__option {
-        width: 42rem;
-        align-items: flex-start; } }
+        width: 44rem; } }
     .work__option--1 {
       padding: 5rem 7rem;
       margin-left: 6.75rem;
-      background-image: linear-gradient(to right bottom, rgba(218, 76, 255, 0.8), rgba(101, 0, 127, 0.8)); }
+      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../images/work-natours-desktop.jpg); }
       @media only screen and (max-width: 75em) {
         .work__option--1 {
           padding: 5rem 5rem;
@@ -654,7 +654,7 @@ body {
           padding: 5rem 1rem; } }
     .work__option--3 {
       padding: 5rem 12rem;
-      background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)); }
+      background-image: linear-gradient(to right bottom, rgba(251, 219, 137, 0.8), rgba(245, 154, 131, 0.8)), url(../images/work-forkify.jpg); }
       @media only screen and (max-width: 75em) {
         .work__option--3 {
           padding: 5rem 10rem; } }
@@ -667,7 +667,7 @@ body {
     .work__option--4 {
       padding: 5rem 7.5rem;
       margin-right: 6.75rem;
-      background-image: linear-gradient(to right bottom, rgba(0, 235, 255, 0.8), rgba(0, 118, 127, 0.8)); }
+      background-image: linear-gradient(to right bottom, rgba(0, 235, 255, 0.8), rgba(0, 118, 127, 0.8)), url(../images/work-budgety.jpg); }
       @media only screen and (max-width: 75em) {
         .work__option--4 {
           padding: 5rem 5.5rem;
