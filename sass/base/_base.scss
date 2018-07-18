@@ -33,5 +33,9 @@ a {
 
 ::selection {
     background-color: $color-primary-light;
-    color: $color-white;
+    color: $color-complimentary-light;
+}
+
+.parallax--bg, .parallax--services {
+    transition: initial;
 }

@@ -1,125 +1,117 @@
-.services-box {
+.services {
     text-align: center;
-    color: $color-primary-dark;
-    padding: 2rem;
 
-    &--1 {
-        background-image: linear-gradient(105deg,
-                            rgba($color-grey-light-1, .85) 0%,
-                            rgba($color-grey-light-1, .85) 50%,
-                            rgba($color-grey-light-3, .85) 50%,
-                            rgba($color-grey-light-3, .85) 100%),
-                            url(../images/services-website-creation.jpg);
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
+    display: flex;
+    justify-content: space-between;
 
+    @include respond(tab-port) {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    
+    @include respond(phone) {
+        flex-direction: column;
     }
 
-    &--2 {
-        background-image: linear-gradient(105deg,
-                            rgba($color-grey-light-1, .85) 0%,
-                            rgba($color-grey-light-1, .85) 50%,
-                            rgba($color-grey-light-3, .85) 50%,
-                            rgba($color-grey-light-3, .85) 100%),
-                            url(../images/services-marketing-package.jpg);
-        background-size: cover;
-        background-position: center;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
-    }
+    &__box {
+        width: 31%;
+        text-align: center;
 
-    &__height {
-        height: 27rem;
-        transition: all .3s;
+        @include respond(tab-port) {
+            width: 49%;
+        }
+        
+        @include respond(phone) {
+            width: 100%;
+            margin-top: 2.5rem;
+        }
 
-        @include respond(tab-land) {
-            height: auto;
+        &:last-child {
+            @include respond(tab-port) {
+                margin-top: 2rem;
+                margin-left: 10rem;
+            }
+            
+            @include respond(phone) {
+                margin-top: 2.5rem;
+                margin-left: 0rem;
+            }
         }
     }
 
-    ul {
+    &__list {
+        text-align: left;
+        padding: 1rem;
+        background-color: rgba($color-grey-light-1, .1);
+        border-radius: 3px;
+
+    }
+
+    &__list-item {
         list-style: none;
-        width: 80%;
+        font-size: 1.8rem;
+        font-weight: 300;
+        color: rgba($color-grey-light-1, .9);
+
+        &:not(:last-child) {
+            margin-bottom: 2rem;
+        }
+
+        &--option {
+            display: block;
+            text-transform: uppercase;
+            letter-spacing: .3rem;
+            color: $color-complimentary-light;
+        }
+
+        &--price {
+            text-transform: uppercase;
+            letter-spacing: .2rem;
+            font-size: 1.4rem;
+            color: $color-complimentary-light;
+        }
+    }
+
+    &__icon {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 1.5rem;
+        transform: translateY(19%);
+        fill: $color-complimentary-light;
+    }
+
+    &__contact {
+        margin-top: 5rem;
+        margin-bottom: 3rem;
+        font-size: 2rem;
+        text-transform: uppercase;
+        letter-spacing: .2rem;
+        color: $color-grey-light-1;
+    }
+
+    &__link {
+        display: block;
+        width: 25rem;
         margin: 0 auto;
         border-radius: 3px;
-        color: $color-primary-dark;
-        transition: all .4s;
+        text-decoration: none;
+        border: 1px solid $color-grey-light-1;
+        color: $color-grey-light-1;
+        transition: all .2s;
 
-        li {
-            text-align: center;
-            font-size: 1.8rem;
-            padding: 1rem;
-
-            @include respond(tab-land) {
-                font-size: 1.6rem;
-            }
-        }
-
-        a {
-            opacity: 0;
-            visibility: hidden;
+        &:hover {
             text-decoration: none;
-            text-transform: uppercase;
-            letter-spacing: .6rem;
-            font-weight: 700;
-            color: $color-primary-dark;
-            border: 1px solid $color-primary-dark;
-            padding:1.5rem .9rem 1.5rem 1.5rem;
-            border-radius: 2px;
-            transition: all .4s;
-
-            @include respond(tab-land) {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            @include respond(tab-port) {
-                width: 75%;
-                display: block;
-                font-size: 1.4rem;
-                padding: 1rem .4rem 1rem 1rem;
-                margin: 0 auto;
-            }
-
-            @include respond(bs-md) {
-                width: 16rem;
-                letter-spacing: .3rem;
-                padding-right: .1rem;
-            }
-
-            &:hover {
-                background-color: $color-primary-dark;
-                color: $color-grey-light-1;
-            }
+            color: $color-complimentary-light;
+            border: 1px solid $color-complimentary-light;
         }
     }
 
-    // &:hover {
-    //     transition: .4s;
-    //     transform: translateY(-1.5rem) scale(1.03);
-    // }
-
-    &:hover &__height {
-        height: 32rem;
-
-        @include respond(tab-land) {
-            height: auto;
-        }
+    &__btn {
+        margin: 0 auto;
+        padding: 1rem;
+        font-size: 2.5rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        letter-spacing: .3rem;
     }
-
-    &:hover a {
-        opacity: 1;
-        visibility: visible;
-    }
-
-    &__button {
-        margin-top: 4rem;
-        z-index: 1000;
-
-        @include respond(bs-md) {
-            margin-top: 2rem;
-        }
-    }
-
-
 }

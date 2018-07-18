@@ -16,8 +16,7 @@
 }
 
 .navbar .nav-item .nav-link:hover {
-	color: $color-white !important;
-	background-color: $color-primary-light !important;
+	color: $color-complimentary-light !important;
 	transition: .2s;
 
 	@include respond(bs-nav) {

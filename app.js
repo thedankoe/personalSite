@@ -6,7 +6,7 @@ const port = process.env.PORT || 8081;
 
 //Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 // View engine setup
 app.set('view engine', 'ejs');
 // Static folder
@@ -25,9 +25,10 @@ app.post('/', (req, res) => {
       <li>Name: ${req.body.name}</li>
       <li>Email: ${req.body.email}</li>
     </ul>
-    <h3>Info On</h3>
+    <h3>Info/Pricing On</h3>
     <ul>
       <li>Website creation: ${req.body.website}</li>
+      <li>Graphic design: ${req.body.design}</li>
       <li>Marketing package: ${req.body.marketing}</li>
     </ul>
     <h3>Message</h3>
@@ -39,7 +40,7 @@ app.post('/', (req, res) => {
   var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
   
   var data = {
-    from: 'Mailgun <thedankoe@gmail.com>',
+    from: `Mailgun <${req.body.email}>`,
     to: 'thedankoe@gmail.com',
     subject: 'Site Inquiry',
     text: 'Site Inquiry',

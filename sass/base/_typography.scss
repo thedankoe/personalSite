@@ -19,7 +19,6 @@ body {
 			}
 		}
 	}
-
 }
 
 .heading-primary {
@@ -34,47 +33,42 @@ body {
 	}
 
 	&--main {
-		display: block;
-		font-size: 7rem;
-		font-weight: 400;
-		letter-spacing: 2.5rem;
-		margin-right: -1.8rem;
+		animation: fadeInRight 1.2s ease-out;
+	}
+
+	&--dan {
+		position: relative;
+		font-size: 10rem;
+		font-weight: 300;
+		letter-spacing: 1.6rem;
+		margin-right: -4.3rem;
 		text-shadow: 0 2rem 4rem rgba($color-black, .3);
+		z-index: 2;
+	}
 
-		animation: moveInLeft 1.2s ease-out;
-
-		@include respond(smallest) {
-			font-size: 5.5rem;
-			letter-spacing: 2rem;
-			margin-right: -2rem;
-		}
+	&--koe {
+		font-size: 10rem;
+		font-weight: 100;
+		color: $color-complimentary-light;
+		letter-spacing: 1.6rem;
+		text-shadow: 0 2rem 4rem rgba($color-black, .3);
+		z-index: 1;
 	}
 
 	&--sub {
 		display: block;
-		font-size: 1.5rem;
-		font-weight: 400;
-		letter-spacing: 1.40rem;
-		margin-left: .6rem;
+		font-size: 2.7rem;
+		font-weight: 100;
+		letter-spacing: .6rem;
+		margin-left: -.6rem;
+		margin-top: -1rem;
 		text-shadow: 0 2rem 4rem rgba($color-black, .3);
 
-		animation: moveInLeft 1.2s ease-out;
+		animation: fadeInLeft 1.2s ease-out;
 
-		@include respond(tab-land) {
-			font-size: 1.6rem;
-			letter-spacing: 1.3rem;
+		@include respond(tab-port) {
+			font-size: 2.6rem;
 		}
-
-		@include respond(phone) {
-			font-size: 1.6rem;
-			letter-spacing: 1.3rem;
-			margin-right: -1.3rem;
-        }
-		
-		@include respond(smallest) {
-			letter-spacing: .8rem;
-			margin-right: -.8rem;
-        }
 	}
 
 	&--button {
@@ -83,15 +77,10 @@ body {
 		font-size: 1.75rem;
 		margin-top: 2rem;
 		margin-left: 19.5rem;
-		animation: moveInBottom 1.2s ease-out;
+		animation: fadeInLate 1.5s ease-out;
 
 		@include respond(phone) {
 			margin: 2rem 0 0 0;
-		}
-
-		&:hover {
-			color: $color-grey-light-1;
-			background-color: $color-primary-dark;
 		}
 	}
 }
@@ -126,6 +115,19 @@ body {
 	color: $color-grey-light-1;
 	margin-bottom: 4rem;
 }
+
+.heading-secondary-blue {
+	text-align: center;
+	font-size: 4rem;
+	text-transform: uppercase;
+	letter-spacing: 1.25rem;
+	padding-top: 6.5rem;
+	margin-right: -1.25rem;
+	color: $color-complimentary-light;
+	margin-bottom: 4rem;
+}
+
+
 
 .heading-tertiary {
 	font-size: 1.7rem;

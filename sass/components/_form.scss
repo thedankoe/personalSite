@@ -7,20 +7,22 @@
     &__input {
         font-size: 1.5rem;
         font-family: inherit;
-        color: inherit;
+        color: $color-grey-light-1;
         padding: 1.5rem 2rem;
         border-radius: 2px;
-        background-color: $color-grey-light-1;
-        box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+        background-color: rgba($color-grey-light-1, .2);
         border: none;
         border-bottom: 3px solid transparent;
         width: 90%;
         display: block;
         transition: all .3s;
 
+        @include respond(smallest) {
+            width: 100%;
+        }
+
         &:focus {
             outline: none;
-            box-shadow: 0 1rem 2rem rgba($color-black, .1);
             border-bottom: 3px solid $color-success;
         }
 
@@ -29,7 +31,7 @@
         }
 
         &::-webkit-input-placeholder {
-            color: $color-primary-light;
+            color: $color-grey-light-1;
         }
     }
 
@@ -54,13 +56,21 @@
         margin-bottom: 1.5rem;
     }
 
+    &__check-flex {
+        display: flex;
+        align-items: center;
+
+        @include respond(tab-port) {
+            flex-direction: column;
+        }
+    }
+
     &__check-group {
-        width: 49%;
-        display: inline-block;
+        width: 31%;
+        // display: inline-block;
         margin-top: 1.5rem;
 
-        @include respond(bs-md) {
-            display: block;
+        @include respond(tab-port) {
             width: 100%;
         }
     }
@@ -80,7 +90,7 @@
     &__check-button {
         height: 2.6rem;
         width: 2.6rem;
-        border: 4px solid $color-grey-light-1;
+        border: 4px solid $color-complimentary-light;
         border-radius: 50%;
         display: inline-block;
         position: absolute;
@@ -90,8 +100,8 @@
         &::after {
             content: "";
             display: block;
-            height: 2rem;
-            width: 2rem;
+            height: 1.5rem;
+            width: 1.5rem;
             border-radius: 50%;
             position: absolute;
             top: 50%;
@@ -112,8 +122,8 @@
         height: 10rem;
         margin-top: 2rem;
         padding: 1.5rem 2rem;
-        background-color: $color-grey-light-1;
-        color: inherit;
+        background-color: rgba($color-grey-light-1, .2);
+        color: $color-grey-light-1;
         font-size: 1.5rem;
         font-family: 'Raleway', sans-serif;
         border: none;
@@ -121,8 +131,12 @@
         outline: none;
         resize: none;
 
+        @include respond(smallest) {
+            width: 100%;
+        }
+
         &::placeholder {
-            color: inherit;
+            color: $color-grey-light-1;
             font-size: 1.5rem;
             font-family: 'Raleway', sans-serif;
         }
@@ -146,8 +160,9 @@
         transition: all .2s;
 
         &:hover {
-            background-color: $color-grey-light-1;
-            color: $color-primary-dark;
+            cursor: pointer;
+            border: 1px solid $color-complimentary-light;
+            color: $color-complimentary-light;
         }
     }
 

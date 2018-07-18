@@ -25,6 +25,22 @@ $(document).ready(function() {
 });
 
 //////////////////////////
+//       PARALLAX       //
+//////////////////////////
+$(window).scroll(function () {
+	parallax();
+});
+
+function parallax() {
+	var wScroll = $(window).scrollTop();
+
+	$('.parallax--bg').css('background-position', 'center ' + (wScroll*0.7) + 'px');
+
+	//$('.parallax--services').css('background-position', 'center ' +(wScroll*0.2) + 'px');
+}
+
+
+//////////////////////////
 //     FORM CONTROL     //
 //////////////////////////
 // Listen for form submit

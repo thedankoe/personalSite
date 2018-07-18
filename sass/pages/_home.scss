@@ -7,7 +7,7 @@
                                     transparent 50%),
 								url(../images/hero-image.jpg);
 	background-size: cover;
-	background-position: center;
+	background-position: center 0px;
 	position: relative;
 
 	@include respond(tab-port) {
@@ -52,12 +52,7 @@
 .section-about {
 	background-color: $color-grey-light-1;
 	padding-top: 0rem;
-	padding-bottom: 20rem;
-	margin-bottom: -5rem;
-
-	@include respond(tab-port) {
-		padding-bottom: 13rem;
-	}
+	padding-bottom: 28rem;
 
 	.about {
 		width: 90%;
@@ -76,47 +71,60 @@
 }
 
 .section-services {
-	padding: 5rem 5rem 10rem 5rem;
-	margin-bottom: -10rem;
-	background-image: linear-gradient(to right bottom, rgba($color-primary-light, .9), rgba($color-primary-dark, .9));
-	transform: skewY(-7deg);
+	padding: 15rem 5rem 20rem 5rem;
+	margin-top: -21rem;
+	margin-bottom: -21rem;
+	text-align: center;
+	background-image: 
+					linear-gradient(to right bottom, 
+					rgba($color-primary-light, .8), 
+					rgba($color-primary-dark, .8)),
+					url(../images/hero-image.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	-webkit-clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+	clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
 
-	.services {
-		&__bs {
-			@include respond(bs-md) {
-				margin: 2rem 0;
-			}
-		}
+	@include respond(tab-port) {
+		-webkit-clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+		clip-path: polygon(0 10%, 100% 0, 100% 90%, 0 100%);
+	}
+
+	@include respond(bs-md) {
+		padding: 15rem 1rem 20rem 1rem;
 	}
 	
-
-	& > * {
-		transform: skewY(7deg);
+	@include respond(smallest) {
+		padding: 8rem 1rem 15rem 1rem;
+		-webkit-clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
+		clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
 	}
 }
 
-.section-blog {
-	padding-top: 20rem;
-	padding-bottom: 5rem;
-	background-color: $color-grey-light-1;
+// .section-blog {
+// 	padding-top: 20rem;
+// 	padding-bottom: 5rem;
+// 	background-color: $color-grey-light-1;
 
-	display: flex;
-	justify-content: center;
-	align-items: stretch;
-	flex-wrap: wrap;
+// 	display: flex;
+// 	justify-content: center;
+// 	align-items: stretch;
+// 	flex-wrap: wrap;
 
-	@include respond(bs-nav) {
-		flex-direction: column;
-		align-items: center;
-	}
+// 	@include respond(bs-nav) {
+// 		flex-direction: column;
+// 		align-items: center;
+// 	}
 
-	&__heading {
-		flex: 0 0 100%;
-	}
-}
+// 	&__heading {
+// 		flex: 0 0 100%;
+// 	}
+// }
 
 .section-contact {
-	padding: 10rem 0 15rem 0;
+	padding-top: 28rem;
 	background-color: $color-grey-light-1;
 
 	.contact {
@@ -126,6 +134,8 @@
 										transparent 60%),
 									url(../images/contact-web-design.jpg);
 		background-size: cover;
+		background-position: center;
+		background-attachment: fixed;
 		border-radius: 3px;
 		box-shadow: 0 1.5rem 4rem rgba($color-black, .2);
 
@@ -147,6 +157,10 @@
 		&__form {
 			width: 65%;
 			padding: 6rem;
+
+			@include respond(tab-port) {
+				padding: 4rem;
+			}
 
 			@include respond(bs-md) {
 				width: 90%;
