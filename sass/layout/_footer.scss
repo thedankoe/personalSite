@@ -3,11 +3,35 @@
 	color: #fff;
 	text-align: center;
 	padding-top: 8rem;
+	padding-bottom: 4rem;
+
+	&__img {
+		width: 30rem;
+		margin-bottom: 4rem;
+
+		@include respond(phone) {
+			width: 20rem;
+		}
+	}
+
+	&__content {
+		display: flex;
+		justify-content: space-around;
+
+		@include respond(bs-md) {
+			flex-direction: column;
+		}
+	}
 
 	&__navigation {
-		border-top: 1px solid $color-grey-light-1;
 		padding-top: 1.5rem;
 		display: inline-block;
+	}
+
+	&__border {
+		width: 30rem;
+		margin: 0 auto 2rem auto;
+		border-top: 1px solid $color-complimentary-light;
 	}
 
 	&__list {
@@ -64,7 +88,7 @@
 	}
 
 	&__copyright {
-		padding-top: 10rem;
+		padding-top: 8rem;
 		text-align: center;
 		margin: 0 auto;
 

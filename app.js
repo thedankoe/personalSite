@@ -40,7 +40,7 @@ app.post('/', (req, res) => {
   var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
   
   var data = {
-    from: `Mailgun <${req.body.email}>`,
+    from: `Site Inquiry <${req.body.email}>`,
     to: 'thedankoe@gmail.com',
     subject: 'Site Inquiry',
     text: 'Site Inquiry',
