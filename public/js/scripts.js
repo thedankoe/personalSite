@@ -47,7 +47,7 @@ function parallax() {
 document.querySelector('#contact-form').addEventListener('submit', submitForm);
 
 // Submit form
-const submitForm = function() {
+function submitForm() {
 	// Show alert
 	document.querySelector('.alert').style.display = 'inline-block';
 

@@ -1,8 +1,9 @@
-const express = require("express");
-const app = express();
-const dotenv = require('dotenv').config();
-const bodyParser = require('body-parser');
-const port = process.env.PORT || 8081;
+var express = require('express');
+var path = require('path');
+var app = express();
+var dotenv = require('dotenv').config();
+var bodyParser = require('body-parser');
+var port = process.env.PORT || 8081;
 
 //Body parser middleware
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -11,6 +12,9 @@ app.use(bodyParser.json());
 app.set('view engine', 'ejs');
 // Static folder
 app.use(express.static(__dirname + '/public'));
+
+app.enable('verbose errors');
+
 
 // MAIN ROUTE
 app.get('/', (req, res) => {
@@ -40,7 +44,7 @@ app.post('/', (req, res) => {
   var mailgun = require('mailgun-js')({apiKey: api_key, domain: domain});
   
   var data = {
-    from: `Site Inquiry <${req.body.email}>`,
+    from: `${req.body.name} <${req.body.email}>`,
     to: 'thedankoe@gmail.com',
     subject: 'Site Inquiry',
     text: 'Site Inquiry',
@@ -52,7 +56,7 @@ app.post('/', (req, res) => {
       console.log(error);
     } else {
       console.log(body);
-      res.redirect('/#contact');
+      res.render('thank-you');
     }
   });
 });
@@ -63,6 +67,30 @@ app.get('/blog', (req, res) => {
 
 app.get('/blog/5-web-design-trends-in-2018', (req, res) => {
   res.render('5-web-design-trends-in-2018');
+});
+
+// 404
+app.get('/404', function(req, res, next){
+  // trigger a 404 since no other middleware
+  // will match /404 after this one, and we're not
+  // responding here
+  next();
+});
+
+app.use(function(req, res, next){
+  res.status(404);
+
+  res.format({
+    html: function () {
+      res.render('404', { url: req.url })
+    },
+    json: function () {
+      res.json({ error: 'Not found' })
+    },
+    default: function () {
+      res.type('txt').send('Not found')
+    }
+  })
 });
 
 app.listen(port, process.env.IP, function(){
