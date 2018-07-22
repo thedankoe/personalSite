@@ -3,6 +3,7 @@ var path = require('path');
 var app = express();
 var dotenv = require('dotenv').config();
 var bodyParser = require('body-parser');
+var sm = require('sitemap');
 var port = process.env.PORT || 8081;
 
 //Body parser middleware
@@ -13,8 +14,27 @@ app.set('view engine', 'ejs');
 // Static folder
 app.use(express.static(__dirname + '/public'));
 
-app.enable('verbose errors');
+sitemap = sm.createSitemap ({
+  hostname: 'https://www.thedankoe.com',
+  cacheTime: 600000,        // 600 sec - cache purge period
+  urls: [
+    { url: '/',  changefreq: 'daily', priority: 0.3 },
+    { url: '/blog',  changefreq: 'monthly',  priority: 0.7 },
+    { url: '/404', changefreq:'weekly', priority: 0.5}    // changefreq: 'weekly',  priority: 0.5
+  ]
+});
+// Gives you a string containing the XML data
+var xml = sitemap.toString();
 
+app.get('/sitemap.xml', function(req, res) {
+  sitemap.toXML( function (err, xml) {
+      if (err) {
+        return res.status(500).end();
+      }
+      res.header('Content-Type', 'application/xml');
+      res.send( xml );
+  });
+});
 
 // MAIN ROUTE
 app.get('/', (req, res) => {
