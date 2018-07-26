@@ -2,17 +2,17 @@
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-@import "base/animations";
+@import "base/animations"; 
 @import "base/base";
 @import "base/typography";
 @import "base/utilities";  
 
 @import "components/about-box";
-@import "components/blog-card";
 @import "components/form"; 
 @import "components/services-box";  
 @import "components/about-why";  
-@import "components/who";  
+@import "components/who";
+@import "components/choose-me";     
 
 @import "layout/footer";
 @import "layout/navigation"; 
