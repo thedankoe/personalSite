@@ -815,7 +815,8 @@ body {
     .section-header {
       background-image: linear-gradient(to right bottom, rgba(65, 67, 69, 0.8), rgba(35, 37, 38, 0.8)), url(../images/hero-image-mobile.jpg); } }
   .section-header__logo {
-    width: 40rem; }
+    width: 40rem;
+    animation: fadeInLeft ease-in-out 1s; }
     @media only screen and (max-width: 28.125em) {
       .section-header__logo {
         width: 32rem; } }
@@ -827,7 +828,8 @@ body {
     align-items: center; }
   .section-header__link {
     margin-top: 1.5rem;
-    display: flex; }
+    display: flex;
+    animation: fadeInLate ease-in-out 1.5s; }
   .section-header__icon {
     width: 4rem;
     height: 4rem;
