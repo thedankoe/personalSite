@@ -63,12 +63,12 @@ function submitForm() {
 
 var sr = ScrollReveal();
 if(window.innerWidth > 600) {
-	sr.reveal('.sr-default', { delay: 400 });
-	sr.reveal('.sr-about-box', { delay: 400 }, 200);
-	sr.reveal('.sr-services-box', { delay: 400 }, 200);
+	sr.reveal('.sr-default', { delay: 200 });
+	sr.reveal('.sr-about-box', { delay: 200 }, 200);
+	sr.reveal('.sr-services-box', { delay: 200 }, 200);
 } else {
-	sr.reveal('.sr-default', { delay: 550 });
-	sr.reveal('.sr-about-box', { delay: 550 }, 200);
-	sr.reveal('.sr-services-box', { delay: 550 }, 200);
+	sr.reveal('.sr-default', { delay: 300 });
+	sr.reveal('.sr-about-box', { delay: 300 }, 200);
+	sr.reveal('.sr-services-box', { delay: 300 }, 200);
 }
 
