@@ -23,10 +23,42 @@ body {
 
 .heading-primary {
 	color: $color-grey-light-1;
-	text-transform: uppercase;
-	text-align: center;
-
 	backface-visibility: hidden;
+
+	@include respond(phone) {
+		text-align: center;
+	}
+
+	&--main {
+		display: block;
+		font-size: 8rem;
+		font-weight: 300;
+
+		animation: fadeInRight ease-in-out 1s;
+
+		@include respond(smallest) {
+			font-size: 7rem;
+		}
+	}
+
+	&--sub {
+		display: block;
+		margin: -1rem 0 0 3rem;
+
+		animation: fadeInLeft ease-in-out 1s;
+
+		@include respond(phone) {
+			margin: -.5rem 0 0 0;
+		}
+		
+		@include respond(smallest) {
+			font-size: 2rem;
+		}
+	}
+
+	&--blue {
+		color: $color-complimentary-light;
+	}
 }
 
 .heading-secondary {
@@ -74,8 +106,6 @@ body {
 		font-size: 3.5rem;
 	}
 }
-
-
 
 .heading-tertiary {
 	font-size: 1.7rem;

@@ -196,9 +196,30 @@ body {
 
 .heading-primary {
   color: #f7f7f7;
-  text-transform: uppercase;
-  text-align: center;
   backface-visibility: hidden; }
+  @media only screen and (max-width: 37.5em) {
+    .heading-primary {
+      text-align: center; } }
+  .heading-primary--main {
+    display: block;
+    font-size: 8rem;
+    font-weight: 300;
+    animation: fadeInRight ease-in-out 1s; }
+    @media only screen and (max-width: 28.125em) {
+      .heading-primary--main {
+        font-size: 7rem; } }
+  .heading-primary--sub {
+    display: block;
+    margin: -1rem 0 0 3rem;
+    animation: fadeInLeft ease-in-out 1s; }
+    @media only screen and (max-width: 37.5em) {
+      .heading-primary--sub {
+        margin: -.5rem 0 0 0; } }
+    @media only screen and (max-width: 28.125em) {
+      .heading-primary--sub {
+        font-size: 2rem; } }
+  .heading-primary--blue {
+    color: #00BFBF; }
 
 .heading-secondary {
   text-align: center;
@@ -696,6 +717,9 @@ body {
   @media only screen and (max-width: 62em) {
     .navbar .nav-item .nav-link:hover {
       background-color: none !important; } }
+
+.navbar-brand {
+  width: 10rem; }
 
 .navTrans {
   background-color: transparent !important;
