@@ -14,12 +14,14 @@
 @import "components/who";
 @import "components/choose-me";     
 
-@import "layout/footer";
+@import "layout/header";   
+@import "layout/footer"; 
 @import "layout/navigation"; 
 @import "layout/nav-two";    
 
-@import "pages/blog";
+@import "pages/404";
 @import "pages/blog-show"; 
-@import "pages/home";    
-@import "pages/thank-you";     
-@import "pages/404";     
+@import "pages/blog";
+@import "pages/home";
+@import "pages/services";       
+@import "pages/thank-you";   

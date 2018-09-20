@@ -1,73 +1,3 @@
-.section-header {
-	height: 100vh;
-	padding: 2rem;
-	background-image: linear-gradient(105deg,
-                                    rgba($color-primary-light, .8) 0%,
-                                    rgba($color-primary-dark, .8) 50%,
-                                    transparent 50%),
-								url(../images/hero-image.jpg);
-	background-size: cover;
-	background-position: center 0px;
-	display: flex;
-	align-items: center;
-
-	@include respond(phone) {
-		justify-content: center;
-	}
-
-	@include respond(tab-port) {
-		background-image: linear-gradient(105deg,
-                                    rgba($color-primary-light, .8) 0%,
-                                    rgba($color-primary-dark, .8) 70%,
-                                    transparent 70%),
-								url(../images/hero-image.jpg);
-	}
-	
-	@include respond(phone) {
-		background-image: linear-gradient(to right bottom,
-                                    rgba($color-primary-light, .8),
-                                    rgba($color-primary-dark, .8)),
-									url(../images/hero-image-mobile.jpg);
-	}
-
-	&__logo {
-		width: 40rem;
-
-		animation: fadeInLeft ease-in-out 1s;
-
-		@include respond(smallest) {
-			width: 32rem;
-		}
-	}
-
-	&__name {
-		width: 52rem;
-
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-	}
-
-	&__link {
-		margin-top: 1.5rem;
-		display: flex;
-
-		animation: fadeInLate ease-in-out 1.5s;
-	}
-
-	&__icon {
-		width: 4rem;
-		height: 4rem;
-		fill: rgba($color-grey-light-1, .5);
-		transition: all .2s;
-
-		&:hover {
-			fill: $color-complimentary-light;
-		}
-	}
-}
-
 .section-about {
 	display: flex;
 	flex-direction: column;
@@ -82,19 +12,6 @@
 		justify-content: center;
 		align-items: flex-start;
 		flex-wrap: wrap;
-
-		&-heading {
-			text-align: center;
-
-			flex: 0 0 100%;
-
-			&--sub {
-				margin-top: -2rem;
-				margin-bottom: 4rem;
-				font-size: 2.4rem;
-				color: rgba($color-black, .5);
-			}
-		}
 	}
 
 	

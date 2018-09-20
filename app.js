@@ -81,6 +81,10 @@ app.post('/', (req, res) => {
   });
 });
 
+app.get('/services', (req, res) => {
+  res.render('services');
+});
+
 app.get('/blog', (req, res) => {
   res.render('blog');
 });

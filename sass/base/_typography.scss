@@ -65,11 +65,21 @@ body {
 	text-align: center;
 	font-size: 4rem;
 	text-transform: uppercase;
-	letter-spacing: .75rem;
+	letter-spacing: .5rem;
 	padding-top: 6.5rem;
-	margin-right: -.75rem;
+	margin-right: -.5rem;
 	color: $color-primary-dark;
 	margin-bottom: 4rem;
+
+	flex: 0 0 100%;
+
+	&--sub {
+		margin-top: -2rem;
+		margin-bottom: 4rem;
+		text-align: center;
+		font-size: 2.4rem;
+		color: rgba($color-black, .5);
+	}
 
 	&--button {
 		padding: .75rem 1.5rem;
@@ -85,9 +95,9 @@ body {
 	text-align: center;
 	font-size: 4rem;
 	text-transform: uppercase;
-	letter-spacing: 1.25rem;
+	letter-spacing: .5rem;
 	padding-top: 6.5rem;
-	margin-right: -1.25rem;
+	margin-right: -.5rem;
 	color: $color-grey-light-1;
 	margin-bottom: 4rem;
 }
@@ -96,9 +106,9 @@ body {
 	text-align: center;
 	font-size: 4rem;
 	text-transform: uppercase;
-	letter-spacing: .75rem;
+	letter-spacing: .5rem;
 	padding-top: 6.5rem;
-	margin-right: -.75rem;
+	margin-right: -.5rem;
 	color: $color-complimentary-light;
 	margin-bottom: 4rem;
 
@@ -139,5 +149,94 @@ body {
 	color: $color-complimentary-light;
 	letter-spacing: .5rem;
 	margin-right: -.5rem;
+}
+
+/////////BUTTONS
+
+.button-dark {
+	position: relative;
+
+    display: flex;
+    justify-content: center;
+	align-items: center;
+    
+    &__link {
+        padding: 2rem;
+        margin-bottom: 6.5rem;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right bottom,
+                                            rgba($color-primary-light, .9),
+                                            rgba($color-primary-dark, 1));
+        color: $color-complimentary-light;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
+		transition: all .2s;
+		
+		&::before {
+			content: "";
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 100%;
+			width: 3px;
+			background-image: linear-gradient(105deg,
+												rgba($color-grey-light-1, .8) 0%,	
+												rgba($color-grey-light-3, .8) 70%,
+												transparent 70%);
+			transform: scaleY(0);
+			transition: transform .2s,
+						width .4s cubic-bezier(1,0,0,1) .2s,
+						background-color .1s;
+		}
+		
+		&:hover::before {
+			transform: scaleY(1);
+			width: 100%;
+		}
+
+        &:hover {
+            text-decoration: none;
+            color: $color-complimentary-light;
+            text-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+            transform: scale(1.05);
+        }
+	}
+	
+	&__text {
+		position: relative;
+		margin-bottom: 0;
+	}
+}
+
+.button-light {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    &__link {
+        padding: 2rem;
+        margin-bottom: 6.5rem;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 100;
+        text-transform: uppercase;
+        background-image: linear-gradient(to right bottom,
+                                            rgba($color-grey-light-1, .1),
+                                            rgba($color-grey-light-1, .1));
+        color: $color-complimentary-light;
+        border-radius: 3px;
+        box-shadow: 0 1.5rem 3rem rgba($color-black, .15);
+        transition: all .2s;
+
+        &:hover {
+            text-decoration: none;
+            color: $color-complimentary-dark;
+            box-shadow: 0 1.5rem 3rem rgba($color-black, .3);
+            transform: scale(1.05);
+        }
+    }
 }
 
